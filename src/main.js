@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import App from './App';
-import WeUI from '../packages';
+// import WeUI from '../packages/picker';
 
 Vue.config.productionTip = false;
 App.mpType = 'app';
-Vue.use(WeUI);
+// Vue.use(WeUI);
 
 const app = new Vue(App);
 app.$mount();

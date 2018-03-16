@@ -21,6 +21,10 @@
 </template>
 
 <script>
+import { Picker as mpPicker } from '../../../packages';
+
+// console.dir(mpPicker);
+
 export default {
   data() {
     return {
@@ -31,23 +35,8 @@ export default {
       value: 0,
     };
   },
-  methods: {
-    bindPickerChange(e) {
-      this.setData({
-        index: e.detail.value,
-      });
-    },
-    bindDateChange(e) {
-      this.setData({
-        date: e.detail.value,
-      });
-    },
-    bindTimeChange(e) {
-      this.setData({
-        time: e.detail.value,
-      });
-    },
-  },
+  components: { mpPicker },
+  methods: {},
 };
 </script>
 
