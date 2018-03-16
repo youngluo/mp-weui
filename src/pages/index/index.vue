@@ -10,25 +10,25 @@
                   <div class="kind-list__item">
                       <div :class="['weui-flex', 'kind-list__item-hd', { 'kind-list__item-hd_show' : item.open}]" @click="kindToggle(item.id)">
                           <div class="weui-flex__item">{{item.name}}</div>
-                          <img class="kind-list__img" src="`@/images/icon_nav_${item.id}.png`" />
+                          <img class="kind-list__img" :src="'/static/images/icon_nav_' + item.id + '.png'" />
                       </div>
                       <div :class="['kind-list__item-bd', {'kind-list__item-bd_show' : item.open}]">
                           <div :class="['weui-cells', {'weui-cells_show' : item.open}]">
-                              <!-- <div v-for="(page, index) in item.pages" :key="index">
-                                  <a href="{{`${page}/${page}`}}" class="weui-cell weui-cell_access">
+                              <div v-for="(page, i) in item.pages" :key="i">
+                                  <a :href="'/pages/' + page + '/' + page" class="weui-cell weui-cell_access">
                                       <div class="weui-cell__bd">{{page}}</div>
                                       <div class="weui-cell__ft weui-cell__ft_in-access"></div>
                                   </a>
-                              </div> -->
+                              </div>
                           </div>
                       </div>
                   </div>
               </div>
           </div>
       </div>
-      <div class="page__ft">
-          <img src="@/images/icon_footer.png" style="width: 84px; height: 19px;" />
-      </div>
+      <!-- <div class="page__ft">
+          <img src="/static/images/icon_footer.png" style="width: 84px; height: 19px;" />
+      </div> -->
   </div>
 </template>
 

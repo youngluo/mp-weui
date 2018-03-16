@@ -1,22 +1,22 @@
-import Picker from './picker'
+import Picker from './picker';
 
-const components = [Picker]
+const components = [Picker];
 
-const install = function(Vue, config = {}) {
-  components.map(component => {
-    Vue.component(component.name, component)
-  })
+function install(Vue) {
+  components.map((component) => {
+    Vue.component(component.name, component);
+  });
 }
 
 // auto install
 if (typeof window !== 'undefined' && window.Vue) {
-  install(window.Vue)
+  install(window.Vue);
 }
 
-const version = '1.0.0'
+const version = '1.0.0';
 
-module.exports = {
+export default {
   install,
   version,
-  Picker
-}
+  Picker,
+};

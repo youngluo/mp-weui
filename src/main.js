@@ -1,8 +1,10 @@
 import Vue from 'vue';
 import App from './App';
+import WeUI from '../packages';
 
 Vue.config.productionTip = false;
 App.mpType = 'app';
+Vue.use(WeUI);
 
 const app = new Vue(App);
 app.$mount();
@@ -32,7 +34,7 @@ export default {
       // 'pages/msg/msg',
       // 'pages/msg/msg_success',
       // 'pages/msg/msg_fail',
-      // 'pages/picker/picker',
+      'pages/picker/picker',
       // 'pages/toast/toast',
       // 'pages/navbar/navbar',
       // 'pages/tabbar/tabbar',
@@ -40,7 +42,7 @@ export default {
     ],
     window: {
       navigationBarTextStyle: 'black',
-      navigationBarTitleText: 'WeUI for mpvue',
+      navigationBarTitleText: 'WeUI for Mpvue',
       navigationBarBackgroundColor: '#f8f8f8',
       backgroundColor: '#f8f8f8',
     },
