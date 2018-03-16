@@ -1,97 +1,155 @@
 <template>
-  <div class="container" @click="clickHandle('test click', $event)">
-
-    <div class="userinfo" @click="bindViewTap">
-      <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
-      <div class="userinfo-nickname">
-        <card :text="userInfo.nickName"></card>
+  <div class="page">
+      <div class="page__hd">
+          <div class="page__title">WeUI</div>
+          <div class="page__desc">WeUI 是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信内网页和微信小程序量身设计，令用户的使用感知更加统一。</div>
       </div>
-    </div>
-
-    <div class="usermotto">
-      <div class="user-motto">
-        <card :text="motto"></card>
+      <div class="page__bd page__bd_spacing">
+          <div class="kind-list">
+              <div v-for="item in list" :key="item.id">
+                  <div class="kind-list__item">
+                      <div :class="['weui-flex', 'kind-list__item-hd', { 'kind-list__item-hd_show' : item.open}]" @click="kindToggle(item.id)">
+                          <div class="weui-flex__item">{{item.name}}</div>
+                          <img class="kind-list__img" src="`@/images/icon_nav_${item.id}.png`" />
+                      </div>
+                      <div :class="['kind-list__item-bd', {'kind-list__item-bd_show' : item.open}]">
+                          <div :class="['weui-cells', {'weui-cells_show' : item.open}]">
+                              <!-- <div v-for="(page, index) in item.pages" :key="index">
+                                  <a href="{{`${page}/${page}`}}" class="weui-cell weui-cell_access">
+                                      <div class="weui-cell__bd">{{page}}</div>
+                                      <div class="weui-cell__ft weui-cell__ft_in-access"></div>
+                                  </a>
+                              </div> -->
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-    </div>
-
-    <form class="form-container">
-      <input type="text" class="form-control" v-model="motto" placeholder="v-model" />
-      <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
-    </form>
-
+      <div class="page__ft">
+          <img src="@/images/icon_footer.png" style="width: 84px; height: 19px;" />
+      </div>
   </div>
 </template>
 
 <script>
-import card from '@/components/card';
-
 export default {
   data() {
     return {
-      motto: 'Hello World',
-      userInfo: {},
+      list: [
+        {
+          id: 'form',
+          name: '表单',
+          open: false,
+          pages: ['button', 'list', 'input', 'slider', 'uploader'],
+        },
+        {
+          id: 'widget',
+          name: '基础组件',
+          open: false,
+          pages: [
+            'article',
+            'badge',
+            'flex',
+            'footer',
+            'gallery',
+            'grid',
+            'icons',
+            'loadmore',
+            'panel',
+            'prediv',
+            'progress',
+          ],
+        },
+        {
+          id: 'feedback',
+          name: '操作反馈',
+          open: false,
+          pages: ['actionsheet', 'dialog', 'msg', 'picker', 'toast'],
+        },
+        {
+          id: 'nav',
+          name: '导航相关',
+          open: false,
+          pages: ['navbar', 'tabbar'],
+        },
+        {
+          id: 'search',
+          name: '搜索相关',
+          open: false,
+          pages: ['searchbar'],
+        },
+      ],
     };
   },
-
-  components: {
-    card,
-  },
-
   methods: {
-    bindViewTap() {
-      const url = '../logs/logs';
-      wx.navigateTo({ url });
-    },
-    getUserInfo() {
-      // 调用登录接口
-      wx.login({
-        success: () => {
-          wx.getUserInfo({
-            success: (res) => {
-              this.userInfo = res.userInfo;
-            },
-          });
-        },
-      });
-    },
-    clickHandle() {
-      // console.log('clickHandle:', msg, ev);
-    },
-  },
+    kindToggle(id) {
+      const { list } = this;
 
-  created() {
-    // 调用应用实例的方法获取全局数据
-    this.getUserInfo();
+      for (let i = 0, len = list.length; i < len; ++i) {
+        if (list[i].id === id) {
+          list[i].open = !list[i].open;
+        } else {
+          list[i].open = false;
+        }
+      }
+
+      this.list = list;
+    },
   },
 };
 </script>
 
-<style scoped>
-.userinfo {
-  display: flex;
-  flex-direction: column;
+<style lang="less">
+.weui-flex {
   align-items: center;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.weui-cells {
+  margin-top: 0;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: 0.3s;
+  &:before,
+  &:after {
+    display: none;
+  }
+  &_show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.weui-cell {
+  &:before {
+    right: 15px;
+  }
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.kind-list__item {
+  margin: 10px 0;
+  background-color: #ffffff;
+  border-radius: 2px;
+  overflow: hidden;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+.kind-list__img {
+  width: 30px;
+  height: 30px;
 }
 
-.usermotto {
-  margin-top: 150px;
+.kind-list__item-hd {
+  padding: 20px;
+  transition: opacity 0.3s;
+  &_show {
+    opacity: 0.4;
+  }
 }
-
-.form-control {
-  display: block;
-  padding: 0 12px;
-  margin-bottom: 5px;
-  border: 1px solid #ccc;
+.kind-list__item-bd {
+  height: 0;
+  overflow: hidden;
+  &_show {
+    height: auto;
+  }
 }
 </style>
