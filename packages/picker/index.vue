@@ -1,22 +1,31 @@
 <template>
-  <picker @change="onPickerChange" :value="value" :range="data">
-      <view class="picker">{{data[value]}}</view>
+  <picker
+    @change="onPickerChange"
+    :range-key="rangeKey"
+    :disabled="disabled"
+    :value="value"
+    :range="range"
+  >
+      <slot />
   </picker>
 </template>
 
 <script>
 export default {
   name: 'mpPicker',
-  componentName: 'mpPicker',
   props: {
-    data: {
+    rangeKey: String,
+    range: {
       required: true,
       type: Array,
-      default: [],
     },
     value: {
       type: Number,
       default: 0,
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
   methods: {
@@ -26,9 +35,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.picker {
-  height: 28px;
-}
-</style>

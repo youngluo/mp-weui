@@ -14,7 +14,7 @@ export default {
     pages: [
       '^pages/index/index',
       // 'pages/button/button',
-      // 'pages/list/list',
+      'pages/list/list',
       // 'pages/input/input',
       // 'pages/slider/slider',
       // 'pages/uploader/uploader',

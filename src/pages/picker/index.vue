@@ -1,48 +1,57 @@
 <template>
   <div class="page">
     <div class="page__hd">
-        <div class="page__title">Picker</div>
-        <div class="page__desc">选择器，这里使用小程序原生的picker。</div>
+      <div class="page__title">Picker</div>
+      <div class="page__desc">选择器，这里只对“selector”模式做了简单封装，其它模式建议使用小程序原生的picker。</div>
     </div>
     <div class="page__bd">
-        <div class="weui-btn-area">
-            <mp-picker v-model="value" :data="array" />
-                <!-- <button type="default">单列选择器:{{value}}</button>
-            </mp-picker> -->
-            <!-- <picker class="weui-btn" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
-                <button type="default">时间选择器</button>
-            </picker>
-            <picker class="weui-btn" mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-                <button type="default">日期选择器</button>
-            </picker> -->
-        </div>
+      <div class="weui-btn-area">
+        <mp-picker v-model="value" :range="array">
+            <button type="default">单列选择器：{{array[value]}}</button>
+        </mp-picker>
+        <picker mode="time" :value="time" start="09:01" end="21:01" @change="bindTimeChange">
+            <button type="default">时间选择器：{{time}}</button>
+        </picker>
+        <picker mode="date" :value="date" start="2015-09-01" end="2017-09-01" @change="bindDateChange">
+            <button type="default">日期选择器：{{date}}</button>
+        </picker>
+      </div>
     </div>
 </div>
 </template>
 
 <script>
-import { Picker as mpPicker } from '../../../packages';
-
-// console.dir(mpPicker);
+import Picker from '../../../packages/picker';
 
 export default {
   data() {
     return {
       array: ['美国', '中国', '巴西', '日本'],
-      index: 0,
-      date: '2016-09-01',
+      value: 1,
       time: '12:01',
-      value: 0,
+      date: '2016-09-01',
     };
   },
-  components: { mpPicker },
-  methods: {},
+  components: { mpPicker: Picker },
+  methods: {
+    bindTimeChange(e) {
+      this.time = e.target.value;
+    },
+    bindDateChange(e) {
+      this.date = e.target.value;
+    },
+  },
 };
 </script>
 
-<style>
+<style lang="less">
 page {
   background-color: #ffffff;
+}
+.weui-btn-area {
+  picker {
+    margin-bottom: 10px;
+  }
 }
 </style>
 
