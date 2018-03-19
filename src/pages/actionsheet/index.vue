@@ -1,0 +1,36 @@
+<template>
+  <div class="page">
+    <div class="page__hd">
+      <div class="page__title">ActionSheet</div>
+      <div class="page__desc">弹出式菜单，采用小程序原生的actionsheet</div>
+    </div>
+    <div class="page__bd">
+      <div class="weui-btn-area">
+        <mp-actionsheet :actions="actions">
+          <button type="default">ActionSheet</button>
+        </mp-actionsheet>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import Actionsheet from '../../../packages/actionsheet';
+
+console.log(Actionsheet);
+export default {
+  data() {
+    return {
+      actions: ['A', 'B', 'C'],
+    };
+  },
+  components: { mpActionSheet: Actionsheet },
+};
+</script>
+
+<style lang="less">
+page {
+  background-color: #ffffff;
+}
+</style>
+

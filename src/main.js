@@ -29,7 +29,7 @@ export default {
       // 'pages/panel/panel',
       // 'pages/preview/preview',
       // 'pages/progress/progress',
-      // 'pages/actionsheet/actionsheet',
+      'pages/actionsheet/actionsheet',
       // 'pages/dialog/dialog',
       // 'pages/msg/msg',
       // 'pages/msg/msg_success',
