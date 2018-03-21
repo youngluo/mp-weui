@@ -20,7 +20,10 @@
 export default {
   name: 'mpCheckbox',
   props: {
-    options: Array,
+    options: {
+      type: Array,
+      required: true,
+    },
     value: Array,
     title: String,
   },

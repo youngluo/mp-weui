@@ -13,7 +13,7 @@ export default {
     wrapperClass: String,
     itemColor: {
       type: String,
-      default: '#000000',
+      default: '#000',
     },
   },
   methods: {
@@ -29,6 +29,3 @@ export default {
   },
 };
 </script>
-
-<style lang="less">
-</style>

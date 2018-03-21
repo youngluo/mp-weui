@@ -19,7 +19,10 @@
 export default {
   name: 'mpRadio',
   props: {
-    options: Array,
+    options: {
+      type: Array,
+      required: true,
+    },
     value: String,
     title: String,
   },
