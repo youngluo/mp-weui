@@ -1,5 +1,5 @@
 <template>
-  <div @click="onClick">
+  <div @click="onClick" :class="wrapperClass">
     <slot />
   </div>
 </template>
@@ -9,7 +9,8 @@ export default {
   name: 'mpActionsheet',
   props: {
     actions: Array,
-    value: String,
+    value: Number,
+    wrapperClass: String,
     itemColor: {
       type: String,
       default: '#000000',
@@ -20,11 +21,8 @@ export default {
       wx.showActionSheet({
         itemList: this.actions,
         itemColor: this.itemColor,
-        success(res) {
-          console.log(res);
-          if (!res.cancel) {
-            console.log(res.tapIndex);
-          }
+        success: (res) => {
+          this.$emit('input', Number(res.tapIndex));
         },
       });
     },

@@ -6,8 +6,8 @@
     </div>
     <div class="page__bd">
       <div class="weui-btn-area">
-        <mp-actionsheet :actions="actions">
-          <button type="default">ActionSheet</button>
+        <mp-actionsheet :actions="actions" v-model="value">
+          <button type="default">ActionSheet：{{value}}</button>
         </mp-actionsheet>
       </div>
     </div>
@@ -17,14 +17,14 @@
 <script>
 import Actionsheet from '../../../packages/actionsheet';
 
-console.log(Actionsheet);
 export default {
   data() {
     return {
       actions: ['A', 'B', 'C'],
+      value: '',
     };
   },
-  components: { mpActionSheet: Actionsheet },
+  components: { mpActionsheet: Actionsheet },
 };
 </script>
 
@@ -33,4 +33,3 @@ page {
   background-color: #ffffff;
 }
 </style>
-
