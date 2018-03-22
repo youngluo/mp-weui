@@ -19,7 +19,7 @@ export default {
       // 'pages/slider/slider',
       // 'pages/uploader/uploader',
       // 'pages/article/article',
-      // 'pages/badge/badge',
+      'pages/badge/badge',
       // 'pages/flex/flex',
       // 'pages/footer/footer',
       // 'pages/gallery/gallery',
