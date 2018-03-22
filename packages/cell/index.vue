@@ -2,18 +2,26 @@
   <a
     :class="['weui-cell', {'weui-cell_access': !!url}]"
     :hover-class="!!url ? 'weui-cell_active' : 'none'"
-    :href="url"
     @click="onClick"
+    :href="url"
   >
-    <div class="weui-cell_hd" v-if="icon">
-      <img :src="icon" class="weui-cell__icon"/>
+    <div
+      class="weui-cell_hd"
+      v-if="icon"
+    >
+      <img
+        class="weui-cell__icon"
+        :src="icon"
+      />
     </div>
-    <div class="weui-cell__bd">
-      {{content}}
-    </div>
-    <div :class="['weui-cell__ft', {'weui-cell__ft_in-access': !!url}]">
-      {{remark}}
-    </div>
+    <div
+      class="weui-cell__bd"
+      v-text="content"
+    />
+    <div
+      :class="['weui-cell__ft', {'weui-cell__ft_in-access': !!url}]"
+      v-text="remark"
+    />
   </a>
 </template>
 
@@ -21,9 +29,9 @@
 export default {
   name: 'mpCell',
   props: {
-    icon: String,
     content: String,
     remark: String,
+    icon: String,
     url: String,
   },
   methods: {

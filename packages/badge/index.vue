@@ -1,10 +1,14 @@
 <template>
-  <div :class="['weui-badge', {'weui-badge_dot': !text}, wrapperClass]" :style="{backgroundColor: color}">{{text}}</div>
+  <div
+    :class="['weui-badge', {'weui-badge_dot': !text}, wrapperClass]"
+    :style="{backgroundColor: color}"
+    v-text="text"
+  />
 </template>
 
 <script>
 export default {
-  name: 'mp-badge',
+  name: 'mpBadge',
   props: {
     color: {
       type: String,

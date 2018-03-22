@@ -1,5 +1,8 @@
 <template>
-  <div @click="onClick" :class="wrapperClass">
+  <div
+    :class="wrapperClass"
+    @click="onClick"
+  >
     <slot />
   </div>
 </template>

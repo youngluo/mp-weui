@@ -1,15 +1,31 @@
 <template>
-  <div class="weui-cell weui-cell_switch">
+  <div
+    class="weui-cell weui-cell_switch"
+    v-if="isInCell"
+  >
     <div class="weui-cell__bd">{{title}}</div>
     <div class="weui-cell__ft">
-        <switch @change="onChange" :checked="value" :disabled="disabled" />
+        <switch
+          :color="disabledColor"
+          :disabled="disabled"
+          @change="onChange"
+          :checked="value"
+        />
     </div>
   </div>
+
+  <switch
+    :color="disabledColor"
+    :disabled="disabled"
+    @change="onChange"
+    :checked="value"
+    v-else
+  />
 </template>
 
 <script>
 export default {
-  name: 'mp-switch',
+  name: 'mpSwitch',
   props: {
     disabled: {
       type: Boolean,
@@ -19,7 +35,16 @@ export default {
       type: Boolean,
       default: false,
     },
+    isInCell: {
+      type: Boolean,
+      default: true,
+    },
     title: String,
+  },
+  computed: {
+    disabledColor() {
+      return this.disabled ? 'rgba(0, 0, 0, 0.1)' : '';
+    },
   },
   methods: {
     onChange(e) {
