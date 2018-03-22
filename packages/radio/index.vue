@@ -1,13 +1,36 @@
 <template>
   <div>
-    <div class="weui-cells__title" v-if="title">{{title}}</div>
+    <div
+      class="weui-cells__title"
+      v-text="title"
+      v-if="title"
+    />
     <div :class="['weui-cells', {'weui-cells_after-title': title}]">
-      <radio-group @change="onRadioChange">
-        <label class="weui-cell weui-check__label" v-for="item in radioOptions" :key="item.value">
-          <radio class="weui-check" :value="item.value" :checked="item.checked" :disabled="item.disabled"/>
-          <div class="weui-cell__bd">{{item.label}}</div>
-          <div class="weui-cell__ft weui-cell__ft_in-radio" v-if="item.checked">
-            <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+      <radio-group @change="onChange">
+        <label
+          :class="['weui-cell', item.disabled ? 'weui-check__label_disabled-radio' : 'weui-check__label']"
+          v-for="item in radioOptions"
+          :key="item.value"
+        >
+          <radio
+            :disabled="item.disabled"
+            :checked="item.checked"
+            :value="item.value"
+            class="weui-check"
+          />
+          <div
+            class="weui-cell__bd"
+            v-text="item.label"
+          />
+          <div
+            class="weui-cell__ft weui-cell__ft_in-radio"
+            v-if="item.checked"
+          >
+            <icon
+              type="success_no_circle"
+              class="weui-icon-radio"
+              size="16"
+            />
           </div>
         </label>
       </radio-group>
@@ -26,29 +49,25 @@ export default {
     value: String,
     title: String,
   },
-  data() {
-    return {
-      radioOptions: [...this.options],
-    };
+  computed: {
+    radioOptions() {
+      return this.options.map((item) => {
+        item.checked = item.value === this.value;
+
+        return item;
+      });
+    },
   },
   methods: {
-    onRadioChange(e) {
-      const { value } = e.target;
-
-      this.updateData(value);
-
-      this.$emit('input', value);
-    },
-    updateData(value) {
-      const { radioOptions } = this;
-      const { length } = radioOptions;
-
-      for (let i = 0; i < length; i++) {
-        radioOptions[i].checked = radioOptions[i].value === value;
-      }
-
-      this.radioOptions = radioOptions;
+    onChange(e) {
+      this.$emit('input', e.target.value);
     },
   },
 };
 </script>
+
+<style lang="less">
+.weui-check__label_disabled-radio {
+  color: rgba(0, 0, 0, 0.15);
+}
+</style>

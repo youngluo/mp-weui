@@ -2,10 +2,9 @@
   <div>
     <div
       class="weui-cells__title"
+      v-text="title"
       v-if="title"
-    >
-      {{title}}
-    </div>
+    />
     <div :class="['weui-cells', {'weui-cells_after-title': title}]">
       <checkbox-group @change="onChange">
           <label
@@ -25,10 +24,12 @@
                     :type="item.checked ? 'success' : 'circle'"
                     class="weui-icon-checkbox_circle"
                     size="23"
-                  >
-                  </icon>
+                  />
               </div>
-              <div class="weui-cell__bd">{{item.label}}</div>
+              <div
+                class="weui-cell__bd"
+                v-text="item.label"
+              />
           </label>
       </checkbox-group>
     </div>

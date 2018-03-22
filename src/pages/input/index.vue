@@ -154,7 +154,7 @@ export default {
   data() {
     return {
       showTopTips: false,
-      radioOptions: [{ label: 'cell standard', value: 'a' }, { label: 'cell standard', value: 'b', checked: true }],
+      radioOptions: [{ label: 'cell standard', value: 'a' }, { label: 'cell standard', value: 'b' }],
       radioValue: 'b',
       checkboxOptions: [
         { label: 'standard is dealt for u.', value: 'a', disabled: true },
