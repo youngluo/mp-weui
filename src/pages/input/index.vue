@@ -14,7 +14,11 @@
         <div class="weui-cells__title">表单</div>
         <div class="weui-cells weui-cells_after-title">
             <mp-field label="qq" placeholder="请输入qq"></mp-field>
+
             <mp-field label="手机号" placeholder="请输入手机号" type="number" state="vcode"></mp-field>
+
+            <mp-field label="名称" placeholder="请输入名称" state="success"></mp-field>
+
             <div class="weui-cell weui-cell_input">
                 <div class="weui-cell__hd">
                     <div class="weui-label">日期</div>
@@ -35,8 +39,7 @@
                     </picker>
                 </div>
             </div>
-            <mp-field label="验证码" placeholder="请输入验证码" state="success"></mp-field>
-            <!-- <div class="weui-cell weui-cell_input weui-cell_vcode">
+            <div class="weui-cell weui-cell_input weui-cell_vcode">
                 <div class="weui-cell__hd">
                     <div class="weui-label">验证码</div>
                 </div>
@@ -46,7 +49,7 @@
                 <div class="weui-cell__ft">
                     <img class="weui-vcode-img" src="/static/images/vcode.jpg" style="width: 108px" />
                 </div>
-            </div> -->
+            </div>
         </div>
         <div class="weui-cells__tips">底部说明文字底部说明文字</div>
 
@@ -71,13 +74,13 @@
             <mp-switch :title="'标题文字：' + switchChecked" v-model="switchChecked" />
         </div>
 
-        <div class="weui-cells__title">文本框</div>
+        <div class="weui-cells__title">文本框：{{textInput}}</div>
         <div class="weui-cells weui-cells_after-title">
-            <div class="weui-cell weui-cell_input">
-                <div class="weui-cell__bd">
-                    <input class="weui-input" placeholder="请输入文本" />
-                </div>
-            </div>
+            <!-- <input
+              class="weui-input"
+              @input="onInput"
+            /> -->
+            <mp-field placeholder="请输入文本" v-model="textInput"></mp-field>
         </div>
 
         <div class="weui-cells__title">文本域</div>
@@ -163,6 +166,7 @@ export default {
       ],
       checkboxValue: ['a'],
       switchChecked: true,
+      textInput: '',
 
       date: '2016-09-01',
       time: '12:01',
@@ -197,24 +201,8 @@ export default {
         });
       }, 3000);
     },
-    checkboxChange(e) {
-      const checkboxItems = this.data.checkboxItems;
-      const values = e.detail.value;
-
-      for (let i = 0, lenI = checkboxItems.length; i < lenI; ++i) {
-        checkboxItems[i].checked = false;
-
-        for (let j = 0, lenJ = values.length; j < lenJ; ++j) {
-          if (checkboxItems[i].value === values[j]) {
-            checkboxItems[i].checked = true;
-            break;
-          }
-        }
-      }
-
-      this.setData({
-        checkboxItems,
-      });
+    onInput(e) {
+      this.textInput = e.target.value;
     },
     bindDateChange(e) {
       this.setData({

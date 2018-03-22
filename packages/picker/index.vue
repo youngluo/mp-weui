@@ -1,12 +1,12 @@
 <template>
   <picker
-    @change="onPickerChange"
     :range-key="rangeKey"
     :disabled="disabled"
-    :value="value"
+    @change="onChange"
     :range="range"
+    :value="value"
   >
-      <slot />
+    <slot />
   </picker>
 </template>
 
@@ -29,7 +29,7 @@ export default {
     },
   },
   methods: {
-    onPickerChange(e) {
+    onChange(e) {
       this.$emit('input', Number(e.target.value));
     },
   },
