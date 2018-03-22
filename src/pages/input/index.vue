@@ -7,9 +7,9 @@
     <div class="page__bd">
         <div class="weui-toptips weui-toptips_warn" v-if="showTopTips">错误提示</div>
 
-        <mp-radio :options="radioOptions" :title="'单选列表项：' + radioValue" v-model="radioValue"/>
+        <mp-radio :options="radioOptions" :title="'单选列表项：' + radioValue" v-model="radioValue" />
 
-        <mp-checkbox :options="checkboxOptions" :title="'复选列表项：' + JSON.stringify(checkboxValue)" v-model="checkboxValue"/>
+        <mp-checklist :options="checkboxOptions" :title="'复选列表项：' + JSON.stringify(checkboxValue)" v-model="checkboxValue" />
 
         <div class="weui-cells__title">表单</div>
         <div class="weui-cells weui-cells_after-title">
@@ -145,7 +145,7 @@
 </template>
 
 <script>
-import mpCheckbox from '../../../packages/checkbox';
+import mpChecklist from '../../../packages/checklist';
 import mpSwitch from '../../../packages/switch';
 import mpField from '../../../packages/field';
 import mpRadio from '../../../packages/radio';
@@ -157,8 +157,9 @@ export default {
       radioOptions: [{ label: 'cell standard', value: 'a' }, { label: 'cell standard', value: 'b', checked: true }],
       radioValue: 'b',
       checkboxOptions: [
-        { label: 'standard is dealt for u.', value: 'a', checked: true },
+        { label: 'standard is dealt for u.', value: 'a', disabled: true },
         { label: 'standard is dealicient for u.', value: 'b' },
+        { label: 'standard is dealicient for u.', value: 'c' },
       ],
       checkboxValue: ['a'],
       switchChecked: true,
@@ -179,7 +180,7 @@ export default {
     };
   },
   components: {
-    mpCheckbox,
+    mpChecklist,
     mpSwitch,
     mpField,
     mpRadio,
