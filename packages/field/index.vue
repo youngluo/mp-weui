@@ -1,5 +1,5 @@
 <template>
-  <div :class="['weui-cell', 'weui-cell_input', {'weui-cell_vcode': state === 'vcode'}]">
+  <div :class="['weui-cell', 'weui-cell_input', {'weui-cell_vcode': state === 'vcode', 'weui-cell_warn': state === 'warning'}]">
     <div class="weui-cell__hd">
       <div class="weui-label">{{label}}</div>
     </div>

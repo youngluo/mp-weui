@@ -8,13 +8,13 @@
 export default {
   name: 'mpActionsheet',
   props: {
-    actions: Array,
-    value: Number,
-    wrapperClass: String,
     itemColor: {
       type: String,
       default: '#000',
     },
+    wrapperClass: String,
+    actions: Array,
+    value: Number,
   },
   methods: {
     onClick() {

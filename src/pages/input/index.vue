@@ -68,12 +68,7 @@
 
         <div class="weui-cells__title">开关</div>
         <div class="weui-cells weui-cells_after-title">
-            <div class="weui-cell weui-cell_switch">
-                <div class="weui-cell__bd">标题文字</div>
-                <div class="weui-cell__ft">
-                    <switch checked />
-                </div>
-            </div>
+            <mp-switch :title="'标题文字：' + switchChecked" v-model="switchChecked" />
         </div>
 
         <div class="weui-cells__title">文本框</div>
@@ -150,9 +145,10 @@
 </template>
 
 <script>
-import mpRadio from '../../../packages/radio';
 import mpCheckbox from '../../../packages/checkbox';
+import mpSwitch from '../../../packages/switch';
 import mpField from '../../../packages/field';
+import mpRadio from '../../../packages/radio';
 
 export default {
   data() {
@@ -165,6 +161,7 @@ export default {
         { label: 'standard is dealicient for u.', value: 'b' },
       ],
       checkboxValue: ['a'],
+      switchChecked: true,
 
       date: '2016-09-01',
       time: '12:01',
@@ -182,9 +179,10 @@ export default {
     };
   },
   components: {
-    mpRadio,
     mpCheckbox,
+    mpSwitch,
     mpField,
+    mpRadio,
   },
   methods: {
     showTopTips() {
