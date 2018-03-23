@@ -1,11 +1,11 @@
 # mp-weui
 
-> mp-weui是基于mpvue和weui-wxss封装的UI库。
+> mp-weui是基于mpvue和weui-wxss封装的小程序UI库。
 
 ## 开发进度
 
 #### 表单
-- [ ] Button
+- [x] Button
 - [x] List（待优化）
 - [x] Input
   - [x] Checklist
