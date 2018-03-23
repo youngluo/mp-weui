@@ -7,7 +7,11 @@
 #### 表单
 - [ ] Button
 - [x] List（待优化）
-- [x] Input（待优化）
+- [x] Input
+  - [x] Checklist
+  - [x] Radio
+  - [x] Switch
+  - [x] Field（待优化）
 - [ ] Slider
 - [ ] Uploader
 
