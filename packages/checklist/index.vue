@@ -6,7 +6,7 @@
       v-if="title"
     />
     <div :class="['weui-cells', {'weui-cells_after-title': title}]">
-      <checkbox-group @change="onChange">
+      <checkbox-group @change="$emit('input', $event.target.value)">
           <label
             :class="['weui-cell', {'weui-check__label': !item.disabled}]"
             v-for="item in checklistOptions"
@@ -65,11 +65,6 @@ export default {
 
         return item;
       });
-    },
-  },
-  methods: {
-    onChange(e) {
-      this.$emit('input', e.target.value);
     },
   },
 };

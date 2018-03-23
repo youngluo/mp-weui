@@ -1,50 +1,55 @@
 <template>
-  <div :class="['weui-cell', 'weui-cell_input', {'weui-cell_vcode': state === 'vcode', 'weui-cell_warn': state === 'warning'}]">
+  <div :class="[
+    {'weui-cell_vcode': state === 'vcode', 'weui-cell_warn': state === 'warning'},
+    {'weui-cell_input': type !== 'textarea'},
+    'weui-cell',
+  ]">
     <div class="weui-cell__hd">
-      <!-- <slot name="label">
-         <div
-            class="weui-label"
-            v-text="label"
-          />
-      </slot> -->
+      <!-- <slot name="label"> -->
       <div
         class="weui-label"
         v-text="label"
         v-if="label"
       />
+      <!-- </slot> -->
     </div>
     <div class="weui-cell__bd">
-      <!-- <slot name="body">
-        <input
-          class="weui-input"
-          :confirm-type="confirmType"
+      <!-- <slot> -->
+      <div v-if="type === 'textarea'">
+        <textarea
+          :cursor-spacing="cursorSpacing"
+          @focus="$emit('focus', $event)"
+          @blur="$emit('blur', $event)"
           :placeholder="placeholder"
+          :auto-height="autoHeight"
           :maxlength="maxlength"
+          class="weui-textarea"
           :disabled="disabled"
-          :value="value"
-          :type="type"
+          @input="onInput"
         />
-      </slot> -->
-      <textarea
-        :placeholder="placeholder"
-        v-if="type === 'textarea'"
-        class="weui-textarea"
-        :disabled="disabled"
-        @input="onInput"
-      />
+        <div
+          v-text="value.length + '/' + maxlength"
+          class="weui-textarea-counter"
+          v-if="maxlength > 0"
+        />
+      </div>
       <input
+        :cursor-spacing="cursorSpacing"
+        @focus="$emit('focus', $event)"
+        @blur="$emit('blur', $event)"
         :confirm-type="confirmType"
         :placeholder="placeholder"
         :maxlength="maxlength"
         :disabled="disabled"
         class="weui-input"
         @input="onInput"
-        :value="value"
         :type="type"
         v-else
       />
+      <!-- </slot> -->
     </div>
     <div class="weui-cell__ft">
+      <!-- <slot name="ft"> -->
       <div v-if="state">
         <div
           v-if="newState === 'vcode'"
@@ -57,10 +62,7 @@
           v-else
         />
       </div>
-      <!-- <slot
-        name="ft"
-        v-else
-      /> -->
+      <!-- </slot> -->
     </div>
   </div>
 </template>
@@ -89,7 +91,12 @@ export default {
       type: String,
       default: 'done',
     },
+    cursorSpacing: {
+      type: Number,
+      default: 20,
+    },
     placeholder: String,
+    autoHeight: Boolean,
     state: String,
     label: String,
     value: String,
@@ -114,4 +121,11 @@ export default {
   },
 };
 </script>
+
+<style lang="less">
+textarea {
+  height: 75px;
+}
+</style>
+
 

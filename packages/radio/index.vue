@@ -6,7 +6,7 @@
       v-if="title"
     />
     <div :class="['weui-cells', {'weui-cells_after-title': title}]">
-      <radio-group @change="onChange">
+      <radio-group @change="$emit('input', $event.target.value)">
         <label
           :class="['weui-cell', item.disabled ? 'weui-check__label_disabled-radio' : 'weui-check__label']"
           v-for="item in radioOptions"
@@ -56,11 +56,6 @@ export default {
 
         return item;
       });
-    },
-  },
-  methods: {
-    onChange(e) {
-      this.$emit('input', e.target.value);
     },
   },
 };
