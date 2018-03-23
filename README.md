@@ -2,20 +2,39 @@
 
 > mp-weui是基于mpvue和weui-wxss封装的UI库。
 
-## Build Setup
+## 开发进度
 
-``` bash
-# install dependencies
-npm install
+#### 表单
+- [] Button
+- [x] List（待优化）
+- [x] Input（待优化）
+- [] Slider
+- [] Uploader
 
-# serve with hot reload at localhost:8080
-npm run dev
+#### 基础组件
+- [] Article
+- [x] Badge
+- [] Flex
+- [] Footer
+- [] Gallery
+- [] Grid
+- [] Icons
+- [] Loadmore
+- [] Panel
+- [] Preview
+- [] Progress
 
-# build for production with minification
-npm run build
+#### 操作反馈
+- [x] Actionsheet
+- [] Dialog
+- [] Msg
+- [] Picker
+- [] Toast
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+#### 导航相关
+- [] Navbar
+- [] Tabbar
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+#### 搜索相关
+- [] Searchbar
+
