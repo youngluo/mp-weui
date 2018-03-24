@@ -5,14 +5,14 @@
 ## 开发进度
 
 #### 表单
-- [x] Button
+- [x] Button（小程序原生组件）
 - [x] List（待优化）
 - [x] Input
   - [x] Checklist
   - [x] Radio
   - [x] Switch
   - [x] Field（待优化）
-- [ ] Slider
+- [x] Slider
 - [ ] Uploader
 
 #### 基础组件

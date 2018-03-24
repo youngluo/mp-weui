@@ -63,6 +63,6 @@ export default {
 
 <style lang="less">
 .weui-check__label_disabled-radio {
-  color: rgba(0, 0, 0, 0.15);
+  color: rgba(0, 0, 0, 0.3);
 }
 </style>

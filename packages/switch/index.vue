@@ -5,12 +5,12 @@
   >
     <div class="weui-cell__bd">{{title}}</div>
     <div class="weui-cell__ft">
-        <switch
-          @change="$emit('input', Boolean($event.target.value))"
-          :color="disabledColor"
-          :disabled="disabled"
-          :checked="value"
-        />
+      <switch
+        @change="$emit('input', Boolean($event.target.value))"
+        :color="disabledColor"
+        :disabled="disabled"
+        :checked="value"
+      />
     </div>
   </div>
 

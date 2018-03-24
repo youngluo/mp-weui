@@ -20,7 +20,7 @@
               />
               <div class="weui-cell__hd weui-check__hd_in-checkbox">
                   <icon
-                    :color="item.disabled ? 'rgba(0, 0, 0, 0.1)': ''"
+                    :color="item.disabled ? 'rgba(0, 0, 0, 0.15)': ''"
                     :type="item.checked ? 'success' : 'circle'"
                     class="weui-icon-checkbox_circle"
                     size="23"

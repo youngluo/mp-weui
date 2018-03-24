@@ -64,6 +64,7 @@
       <div class="weui-cells__title">开关</div>
       <div class="weui-cells weui-cells_after-title">
         <mp-switch :title="'标题文字：' + switchChecked" v-model="switchChecked" />
+        <mp-switch :title="'标题文字：' + switchChecked" v-model="switchChecked" disabled />
       </div>
 
       <div class="weui-cells__title">文本框：{{textInput}}</div>
@@ -141,7 +142,11 @@ export default {
   data() {
     return {
       showTopTips: false,
-      radioOptions: [{ label: 'cell standard', value: 'a' }, { label: 'cell standard', value: 'b' }],
+      radioOptions: [
+        { label: 'cell standard', value: 'a', disabled: true },
+        { label: 'cell standard', value: 'b' },
+        { label: 'cell standard', value: 'c' },
+      ],
       radioValue: 'b',
       checkboxOptions: [
         { label: 'standard is dealt for u.', value: 'a', disabled: true },

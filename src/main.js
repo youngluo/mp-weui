@@ -16,7 +16,7 @@ export default {
       'pages/button/button',
       'pages/list/list',
       'pages/input/input',
-      // 'pages/slider/slider',
+      'pages/slider/slider',
       // 'pages/uploader/uploader',
       // 'pages/article/article',
       'pages/badge/badge',
