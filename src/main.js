@@ -23,7 +23,7 @@ export default {
       // 'pages/flex/flex',
       'pages/footer/footer',
       // 'pages/gallery/gallery',
-      // 'pages/grid/grid',
+      'pages/grid/grid',
       // 'pages/icons/icons',
       // 'pages/loadmore/loadmore',
       // 'pages/panel/panel',
