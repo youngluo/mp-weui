@@ -19,7 +19,7 @@
 - [ ] Article
 - [x] Badge
 - [ ] Flex
-- [ ] Footer
+- [x] Footer
 - [ ] Gallery
 - [ ] Grid
 - [ ] Icons
