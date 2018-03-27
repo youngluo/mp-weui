@@ -22,7 +22,7 @@
 - [x] Footer
 - [ ] Gallery
 - [x] Grid（待优化）
-- [ ] Icons
+- [x] Icons（小程序原生组件）
 - [ ] Loadmore
 - [ ] Panel
 - [ ] Preview

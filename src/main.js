@@ -24,7 +24,7 @@ export default {
       'pages/footer/footer',
       // 'pages/gallery/gallery',
       'pages/grid/grid',
-      // 'pages/icons/icons',
+      'pages/icons/icons',
       // 'pages/loadmore/loadmore',
       // 'pages/panel/panel',
       // 'pages/preview/preview',
