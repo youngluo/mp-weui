@@ -26,7 +26,7 @@
 - [ ] Loadmore
 - [ ] Panel
 - [ ] Preview
-- [ ] Progress
+- [x] Progress
 
 #### 操作反馈
 - [x] Actionsheet

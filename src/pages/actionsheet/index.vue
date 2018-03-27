@@ -6,7 +6,10 @@
     </div>
     <div class="page__bd">
       <div class="weui-btn-area">
-        <mp-actionsheet :actions="actions" v-model="value">
+        <mp-actionsheet
+          :actions="actions"
+          v-model="value"
+        >
           <button type="default">ActionSheet：{{value}}</button>
         </mp-actionsheet>
       </div>
