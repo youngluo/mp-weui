@@ -21,7 +21,7 @@
 - [ ] Flex
 - [x] Footer
 - [ ] Gallery
-- [ ] Grid
+- [x] Grid（待优化）
 - [ ] Icons
 - [ ] Loadmore
 - [ ] Panel
