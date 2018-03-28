@@ -23,7 +23,7 @@
 - [ ] Gallery
 - [x] Grid（待优化）
 - [x] Icons（小程序原生组件）
-- [ ] Loadmore
+- [x] Loadmore
 - [ ] Panel
 - [ ] Preview
 - [x] Progress
