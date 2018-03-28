@@ -1,10 +1,11 @@
 import Vue from 'vue';
 import App from './App';
-// import WeUI from '../packages/picker';
+import WeUI from '../packages';
 
 Vue.config.productionTip = false;
 App.mpType = 'app';
-// Vue.use(WeUI);
+
+Vue.use(WeUI);
 
 const app = new Vue(App);
 app.$mount();
@@ -30,7 +31,7 @@ export default {
       // 'pages/preview/preview',
       'pages/progress/progress',
       'pages/actionsheet/actionsheet',
-      // 'pages/dialog/dialog',
+      'pages/dialog/dialog',
       // 'pages/msg/msg',
       // 'pages/msg/msg_success',
       // 'pages/msg/msg_fail',

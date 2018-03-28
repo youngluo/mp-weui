@@ -35,10 +35,12 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', {
       'optionalDependencies': ['test/unit/index.js']
     }],
-    'no-const-assign': 0,
-    'no-plusplus': 0,
     'array-callback-return': 0,
+    'no-restricted-syntax': 0,
     'no-param-reassign': 0,
+    'no-const-assign': 0,
+    'no-multi-assign': 0,
+    'no-plusplus': 0,
     'func-names': 0,
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
