@@ -5,6 +5,7 @@
       <div class="page__desc">对话框，采用小程序原生的modal</div>
     </div>
     <div class="page__bd">
+      <P class="page__desc">{{message}}</P>
       <div class="weui-btn-area">
         <button
           @click="openConfirm"
@@ -12,7 +13,7 @@
           type="default"
         >
           Confirm Dialog
-        </button>
+          </button>
           <button
             @click="openAlert"
             class="weui-btn"
@@ -27,21 +28,30 @@
 
 <script>
 export default {
+  data() {
+    return {
+      message: '',
+    };
+  },
   methods: {
     openConfirm() {
+      const self = this;
+
       this.$dialog.confirm('弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内', '弹窗标题', {
         onOk() {
-          console.log('用户点击了确定');
+          self.message = 'confirm：用户点击了确定';
         },
         onCancel() {
-          console.log('用户点击了取消');
+          self.message = 'confirm：用户点击了取消';
         },
       });
     },
     openAlert() {
+      const self = this;
+
       this.$dialog.alert('弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内', {
         onOk() {
-          console.log('用户点击了确定');
+          self.message = 'alert：用户点击了确定';
         },
       });
     },
@@ -52,6 +62,9 @@ export default {
 <style lang="less">
 page {
   background-color: #ffffff;
+}
+.page__desc {
+  text-align: center;
 }
 </style>
 
