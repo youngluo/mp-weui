@@ -30,10 +30,10 @@
 
 #### 操作反馈
 - [x] Actionsheet
-- [ ] Dialog
+- [x] Dialog
 - [ ] Msg
 - [ ] Picker
-- [ ] Toast
+- [x] Toast
 
 #### 导航相关
 - [ ] Navbar

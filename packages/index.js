@@ -1,5 +1,6 @@
 import Picker from './picker';
 import Dialog from './dialog';
+import Toast from './toast';
 import '../utils/assign';
 
 const components = [Picker];
@@ -11,6 +12,7 @@ function install(Vue) {
   });
 
   Vue.$dialog = Vue.prototype.$dialog = Dialog;
+  Vue.$toast = Vue.prototype.$toast = Toast;
 }
 
 // auto install
@@ -24,6 +26,7 @@ export {
   install,
   version,
   Dialog,
+  Toast,
 };
 
 export default {
