@@ -7,7 +7,8 @@
       title="操作失败"
       type="error"
       show-cancel
-    />
+    >
+    </mp-message>
 
     <mp-footer
       :links="links"

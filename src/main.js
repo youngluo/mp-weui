@@ -37,7 +37,7 @@ export default {
       'pages/msg_fail/msg_fail',
       'pages/picker/picker',
       'pages/toast/toast',
-      // 'pages/navbar/navbar',
+      'pages/navbar/navbar',
       // 'pages/tabbar/tabbar',
       // 'pages/searchbar/searchbar'
     ],

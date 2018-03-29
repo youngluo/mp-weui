@@ -38,6 +38,7 @@ module.exports = {
     'array-callback-return': 0,
     'no-unused-expressions': 0,
     'no-restricted-syntax': 0,
+    'no-mixed-operators': 0,
     'no-param-reassign': 0,
     'no-const-assign': 0,
     'no-multi-assign': 0,
