@@ -38,8 +38,8 @@ export default {
       'pages/picker/picker',
       'pages/toast/toast',
       'pages/navbar/navbar',
-      // 'pages/tabbar/tabbar',
-      // 'pages/searchbar/searchbar'
+      'pages/tabbar/tabbar',
+      'pages/searchbar/searchbar',
     ],
     window: {
       navigationBarTextStyle: 'black',
