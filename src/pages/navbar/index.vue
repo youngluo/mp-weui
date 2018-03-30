@@ -1,83 +1,42 @@
 <template>
-  <div class="page">
-    <div class="page__bd">
-      <div class="weui-tab">
-        <div class="weui-navbar">
-          <div
-            :class="['weui-navbar__item', {'weui-bar__item_on' : activeIndex == index}]"
-            v-for="(item, index) in tabs"
-            @click="tabClick($event, index)"
-            :key="item"
-          >
-            <div
-              class="weui-navbar__title"
-              v-text="item"
-            />
-        </div>
-        <div
-          class="weui-navbar__slider"
-          :style="{'-webkit-transform': 'translateX('+sliderOffset+'px)',transform: 'translateX('+sliderOffset+'px)', left: sliderLeft+'px'}"
-        />
-      </div>
-      <div class="weui-tab__panel">
-        <div
-          class="weui-tab__content"
-          v-if="activeIndex === 0"
-        >
-          选项一的内容
-      </div>
-      <div
-        class="weui-tab__content"
-        v-if="activeIndex === 1"
-      >
-        选项二的内容
-    </div>
+  <mp-navbar
+    v-model="activeIndex"
+    :columns="columns"
+  >
+    <!-- <mp-navbar-panel :active-index="activeIndex" :index="0">
+      选项一的内容
+    </mp-navbar-panel> -->
     <div
+      v-for="(item, index) in columns"
+      v-if="activeIndex === index"
       class="weui-tab__content"
-      v-if="activeIndex === 2"
+      :key="item"
     >
-      选项三的内容
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
+      {{item}}的内容
+    </div>
+  </mp-navbar>
 </template>
 
 <script>
+import mpNavbar from '../../../packages/navbar';
+import mpNavbarPanel from '../../../packages/navbar-panel';
+
 export default {
   data() {
     return {
-      tabs: ['选项一', '选项二', '选项三'],
-      sliderWidth: 96,
-      sliderOffset: 0,
-      activeIndex: 1,
-      sliderLeft: 0,
+      columns: ['选项一', '选项二', '选项三'],
+      activeIndex: 0,
     };
   },
-  methods: {
-    tabClick(e, index) {
-      this.sliderOffset = e.currentTarget.offsetLeft;
-      this.activeIndex = index;
-    },
-  },
-  mounted() {
-    const { length } = this.tabs;
-
-    wx.getSystemInfo({
-      success: (res) => {
-        this.sliderLeft = (res.windowWidth / length - this.sliderWidth) / 2;
-        this.sliderOffset = res.windowWidth / length * this.activeIndex;
-      },
-    });
+  components: {
+    mpNavbar,
+    mpNavbarPanel,
   },
 };
 </script>
 
 <style lang="less">
-page,
-.page,
-.page__bd {
+page {
   height: 100%;
 }
 .page__bd {
