@@ -1,10 +1,11 @@
 <template>
   <picker
+    :mode="multiple ? 'multiSelector' : 'selector'"
     :range-key="rangeKey"
     :disabled="disabled"
     @change="onChange"
+    :value="index"
     :range="range"
-    :value="value"
   >
     <slot />
   </picker>
@@ -14,23 +15,49 @@
 export default {
   name: 'mpPicker',
   props: {
+    value: [String, Array],
     rangeKey: String,
     range: {
       required: true,
       type: Array,
     },
-    value: {
-      type: Number,
-      default: 0,
-    },
     disabled: {
       type: Boolean,
       default: false,
     },
+    multiple: Boolean,
+  },
+  computed: {
+    index() {
+      return this.getIndex();
+    },
   },
   methods: {
     onChange(e) {
-      this.$emit('input', Number(e.target.value));
+      const value = this.getValue(e.target.value);
+
+      this.$emit('change', value);
+      this.$emit('input', value);
+    },
+    getIndex() {
+      if (this.multiple) {
+        return this.value.map((value, i) => this.getCurrentIndex(this.range[i], value));
+      }
+
+      return this.getCurrentIndex(this.range, this.value);
+    },
+    getCurrentIndex(range, value) {
+      return this.rangeKey ? range.findIndex(item => item.value === value) : range.indexOf(value);
+    },
+    getValue(selectedIndex) {
+      if (this.multiple) {
+        return selectedIndex.map((index, i) => this.getCurrentValue(this.range[i][index]));
+      }
+
+      return this.getCurrentValue(this.range[selectedIndex]);
+    },
+    getCurrentValue(value) {
+      return this.rangeKey ? value.value : value;
     },
   },
 };
