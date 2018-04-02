@@ -8,10 +8,9 @@
           size="14"
         />
         <input
-          @input="currentValue = $event.target.value"
           class="weui-search-bar__input"
           :placeholder="placeholder"
-          :value="currentValue"
+          v-model="currentValue"
           :focus="visible"
           type="text"
         />
@@ -43,9 +42,9 @@
       </label>
   </div>
   <div
+    @click="currentValue = '', visible = false"
     class="weui-search-bar__cancel-btn"
     v-text="cancelText"
-    @click="onCancel"
     v-if="visible"
   />
   </div>
@@ -75,11 +74,8 @@ export default {
     currentValue(value) {
       this.$emit('input', value);
     },
-  },
-  methods: {
-    onCancel() {
-      this.currentValue = '';
-      this.visible = false;
+    value(value) {
+      this.currentValue = value;
     },
   },
 };

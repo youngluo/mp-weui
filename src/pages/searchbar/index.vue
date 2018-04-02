@@ -6,49 +6,23 @@
     </div>
     <div class="page__bd">
       <mp-search v-model="value" />
-      {{value}}
       <div
         class="weui-cells searchbar-result"
         v-if="!!value"
       >
         <a
-          href=""
-          class="weui-cell"
           hover-class="weui-cell_active"
+          v-for="item in [1,2,3,4,5]"
+          class="weui-cell"
+          :key="item"
+          href=""
         >
           <div class="weui-cell__bd">
             <div>实时搜索文本</div>
           </div>
-          </a>
-          <a
-            href=""
-            class="weui-cell"
-            hover-class="weui-cell_active"
-          >
-            <div class="weui-cell__bd">
-              <div>实时搜索文本</div>
-            </div>
-            </a>
-            <a
-              href=""
-              class="weui-cell"
-              hover-class="weui-cell_active"
-            >
-              <div class="weui-cell__bd">
-                <div>实时搜索文本</div>
-              </div>
-              </a>
-              <a
-                href=""
-                class="weui-cell"
-                hover-class="weui-cell_active"
-              >
-                <div class="weui-cell__bd">
-                  <div>实时搜索文本</div>
-                </div>
-                </a>
+        </a>
+      </div>
     </div>
-  </div>
   </div>
 </template>
 
