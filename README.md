@@ -10,13 +10,13 @@
 
     import 'mp-weui/lib/style.css'; // 需在App.vue中全局引入css文件
 
-由于mpvue限制（component暂不支持全局注册、间接import、复杂slot）暂时只能使用下面的方式局部注册组件：
+由于mpvue限制（component暂不支持全局注册、间接import、复杂slot）暂时只能使用下面的方式局部注册组件：
 
     import Radio from 'mp-weui/packages/radio'
 
 ## 文档
 
-即将上线...
+即将上线...
 
 ## 开发进度
 
