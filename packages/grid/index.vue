@@ -6,7 +6,7 @@
     :href="href"
   >
     <div class="weui-grid__icon">
-      <!-- <slot name="icon"> -->
+      <!-- <slot> -->
       <img
         class="weui-grid__icon-img"
         :src="iconSrc"

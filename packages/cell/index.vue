@@ -1,27 +1,29 @@
 <template>
   <a
-    :class="['weui-cell', {'weui-cell_access': !!url}]"
-    :hover-class="!!url ? 'weui-cell_active' : 'none'"
+    :class="['weui-cell', {'weui-cell_access': !!href}]"
+    :hover-class="!!href ? 'weui-cell_active' : 'none'"
     @click="onClick"
-    :href="url"
+    :href="href"
   >
-    <div
-      class="weui-cell_hd"
-      v-if="icon"
-    >
-      <img
-        class="weui-cell__icon"
-        :src="icon"
-      />
+    <div class="weui-cell_hd">
+      <!-- <slot name="icon"> -->
+        <img
+          class="weui-cell__icon"
+          :src="iconSrc"
+          v-if="iconSrc"
+        />
+      <!-- </slot> -->
     </div>
-    <div
-      class="weui-cell__bd"
-      v-text="content"
-    />
-    <div
-      :class="['weui-cell__ft', {'weui-cell__ft_in-access': !!url}]"
-      v-text="remark"
-    />
+    <div class="weui-cell__bd">
+      <!-- <slot> -->
+        <span v-text="content" />
+      <!-- </slot> -->
+    </div>
+    <div :class="['weui-cell__ft', {'weui-cell__ft_in-access': !!href}]">
+      <!-- <slot name="label"> -->
+        <span v-text="label"/>
+      <!-- </slot> -->
+    </div>
   </a>
 </template>
 
@@ -30,9 +32,9 @@ export default {
   name: 'mpCell',
   props: {
     content: String,
-    remark: String,
-    icon: String,
-    url: String,
+    iconSrc: String,
+    label: String,
+    href: String,
   },
   methods: {
     onClick() {
