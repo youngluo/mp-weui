@@ -5,7 +5,7 @@ export default {
 </script>
 
 <style>
-@import '../weui/weui.css';
+@import '../node_modules/weui-wxss/dist/app.wxss';
 
 page {
   background-color: #f8f8f8;

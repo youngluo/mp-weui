@@ -15,7 +15,7 @@
                       <div :class="['kind-list__item-bd', {'kind-list__item-bd_show' : item.open}]">
                           <div :class="['weui-cells', {'weui-cells_show' : item.open}]">
                               <div v-for="(page, i) in item.pages" :key="i">
-                                  <a :href="'/pages/' + page + '/' + page" class="weui-cell weui-cell_access">
+                                  <a :href="'/pages/' + page + '/main'" class="weui-cell weui-cell_access">
                                       <div class="weui-cell__bd">{{page}}</div>
                                       <div class="weui-cell__ft weui-cell__ft_in-access"></div>
                                   </a>

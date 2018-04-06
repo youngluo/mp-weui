@@ -30,12 +30,12 @@ export default {
   methods: {
     openSuccess() {
       wx.navigateTo({
-        url: '/pages/msg_success/msg_success',
+        url: '/pages/msg_success/main',
       });
     },
     openFail() {
       wx.navigateTo({
-        url: '/pages/msg_fail/msg_fail',
+        url: '/pages/msg_fail/main',
       });
     },
   },
