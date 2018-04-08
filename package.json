@@ -7,7 +7,7 @@
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
-    "publish": "webpack --config webpack.config.pub.js",
+    "release": "webpack --config webpack.config.release.js",
     "lint": "eslint --ext .js,.vue src"
   },
   "repository": {
@@ -36,7 +36,6 @@
     "babel-register": "^6.22.0",
     "chalk": "^2.0.1",
     "connect-history-api-fallback": "^1.3.0",
-    "cooking": "^1.5.4",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
     "cssnano": "^3.10.0",

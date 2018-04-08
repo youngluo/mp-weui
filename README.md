@@ -2,7 +2,7 @@
 
 > mp-weui是基于[mpvue](https://github.com/Meituan-Dianping/mpvue)和[weui-wxss](https://github.com/Tencent/weui-wxss)封装的小程序UI库。
 
-## 安装
+<!-- ## 安装
 
     npm install mp-weui -S
 
@@ -12,7 +12,7 @@
 
 由于mpvue限制（component暂不支持全局注册、间接import、复杂slot）暂时只能使用下面的方式局部注册组件：
 
-    import Radio from 'mp-weui/packages/radio'
+    import Radio from 'mp-weui/packages/radio' -->
 
 ## 文档
 

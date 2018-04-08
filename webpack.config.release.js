@@ -13,39 +13,30 @@ const rules = [
     test: /\.vue$/,
     loader: 'vue-loader',
     options: {
-      extractCSS: true,
+      loaders: {
+        css: ExtractTextPlugin.extract({
+          use: 'css-loader',
+          fallback: 'vue-style-loader'
+        })
+      }
     },
   },
   {
     test: /\.js$/,
-    use: [
-      'babel-loader',
-      'vue-loader',
-    ],
+    use: 'babel-loader',
   },
   {
-    test: /\.css$/,
+    test: /\.wxss$/,
     use: ExtractTextPlugin.extract({
       use: [
         {
           loader: 'css-loader',
           options: {
             minimize: false,
-            sourceMap: false
-          }
-        },
-        {
-          loader: 'px2rpx-loader',
-          options: {
-            baseDpr: 1,
-            rpxUnit: 0.5
           }
         },
         {
           loader: 'postcss-loader',
-          options: {
-            sourceMap: true
-          }
         }
       ],
       fallback: 'vue-style-loader'
@@ -72,23 +63,19 @@ const webpackConfig = {
     //   },
     //   sourceMap: false,
     // }),
-    new ExtractTextPlugin({
-      filename: 'style.css',
-    }),
-    // Compress extracted CSS. We are using this plugin so that possible
-    // duplicated CSS from different components can be deduped.
-    new OptimizeCSSPlugin({
-      cssProcessorOptions: {
-        safe: true,
-      },
-    }),
-    new CopyWebpackPlugin([
-      {
-        from: './node_modules/weui-wxss/dist/style/weui.wxss',
-        to: path.resolve(ROOT_PATH, 'weui-wxss/weui.css'),
-        ignore: ['.*'],
-      },
-    ]),
+    new ExtractTextPlugin('style.css'),
+    // new OptimizeCSSPlugin({
+    //   cssProcessorOptions: {
+    //     safe: true,
+    //   },
+    // }),
+    // new CopyWebpackPlugin([
+    //   {
+    //     from: './node_modules/weui-wxss/dist/style/weui.wxss',
+    //     to: path.resolve(ROOT_PATH, 'weui-wxss/weui.css'),
+    //     ignore: ['.*'],
+    //   },
+    // ]),
   ],
   resolve: {
     extensions: ['.js', '.vue'],
