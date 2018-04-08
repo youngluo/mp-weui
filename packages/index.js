@@ -20,6 +20,7 @@ import Search from './search';
 import Slider from './slider';
 import Switch from './switch';
 import '../utils/assign';
+import '../weui-wxss/weui.css';
 
 const components = [
   Actionsheet,

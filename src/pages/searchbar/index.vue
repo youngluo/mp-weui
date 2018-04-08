@@ -5,10 +5,10 @@
       <div class="page__desc">搜索栏</div>
     </div>
     <div class="page__bd">
-      <mp-search v-model="value" />
+      <mp-search @change="onSearchChange" @confirm="onSearchConfirm" />
       <div
         class="weui-cells searchbar-result"
-        v-if="!!value"
+        v-if="!!searchValue"
       >
         <a
           hover-class="weui-cell_active"
@@ -32,11 +32,20 @@ import mpSearch from '../../../packages/search';
 export default {
   data() {
     return {
-      value: '',
+      searchValue: '',
     };
   },
   components: {
     mpSearch,
+  },
+  methods: {
+    onSearchChange(value) {
+      // this.searchValue = value;
+      this.$toast(`onSearchChange:${value}`);
+    },
+    onSearchConfirm(value) {
+      this.$toast(`onSearchConfirm:${value}`);
+    },
   },
 };
 </script>

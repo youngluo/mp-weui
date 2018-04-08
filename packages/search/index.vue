@@ -8,7 +8,9 @@
           size="14"
         />
         <input
+          @confirm="$emit('confirm', currentValue)"
           class="weui-search-bar__input"
+          :confirm-type="confirmType"
           :placeholder="placeholder"
           v-model="currentValue"
           :focus="visible"
@@ -23,30 +25,30 @@
             type="clear"
             size="14"
           />
+        </div>
       </div>
-    </div>
-    <label
-      class="weui-search-bar__label"
-      @click="visible = true"
-      v-if="!visible"
-    >
-      <icon
-        class="weui-icon-search"
-        type="search"
-        size="14"
-      />
-      <div
-        class="weui-search-bar__text"
-        v-text="placeholder"
-      />
+      <label
+        class="weui-search-bar__label"
+        @click="visible = true"
+        v-if="!visible"
+      >
+        <icon
+          class="weui-icon-search"
+          type="search"
+          size="14"
+        />
+        <div
+          class="weui-search-bar__text"
+          v-text="placeholder"
+        />
       </label>
-  </div>
-  <div
-    @click="currentValue = '', visible = false"
-    class="weui-search-bar__cancel-btn"
-    v-text="cancelText"
-    v-if="visible"
-  />
+    </div>
+    <div
+      @click="currentValue = '', visible = false"
+      class="weui-search-bar__cancel-btn"
+      v-text="cancelText"
+      v-if="visible"
+    />
   </div>
 </template>
 
@@ -54,6 +56,10 @@
 export default {
   name: 'mpSearch',
   props: {
+    confirmType: {
+      type: String,
+      default: 'done',
+    },
     placeholder: {
       type: String,
       default: '搜索',
@@ -67,12 +73,13 @@ export default {
   data() {
     return {
       currentValue: this.value,
-      visible: false, // 是否显示input
+      visible: false,
     };
   },
   watch: {
     currentValue(value) {
       this.$emit('input', value);
+      this.$emit('change', value);
     },
     value(value) {
       this.currentValue = value;
