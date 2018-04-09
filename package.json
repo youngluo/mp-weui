@@ -8,6 +8,7 @@
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
     "release": "webpack --config webpack.config.release.js",
+    "r": "node_modules/.bin/poi build",
     "lint": "eslint --ext .js,.vue src"
   },
   "repository": {
@@ -20,9 +21,7 @@
   },
   "homepage": "https://github.com/youngluo/mp-weui#readme",
   "author": "Young Luo",
-  "dependencies": {
-    "weui-wxss": "^1.1.1"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "mpvue": "^1.0.6"
   },
@@ -35,7 +34,6 @@
     "babel-preset-stage-2": "^6.22.0",
     "babel-register": "^6.22.0",
     "chalk": "^2.0.1",
-    "connect-history-api-fallback": "^1.3.0",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
     "cssnano": "^3.10.0",
@@ -48,7 +46,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.14.1",
-    "extract-text-webpack-plugin": "^2.0.0",
+    "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.1",
     "friendly-errors-webpack-plugin": "^1.1.3",
     "glob": "^7.1.2",
@@ -56,17 +54,20 @@
     "http-proxy-middleware": "^0.17.3",
     "less": "^3.0.1",
     "less-loader": "^4.1.0",
+    "mpvue": "^1.0.6",
     "mpvue-loader": "^1.0.8",
     "mpvue-template-compiler": "^1.0.6",
     "mpvue-webpack-target": "^1.0.0",
     "optimize-css-assets-webpack-plugin": "^2.0.0",
     "ora": "^1.2.0",
+    "poi": "^10.0.0-rc.3",
     "postcss-loader": "^2.0.6",
     "postcss-mpvue-wxss": "^1.0.0",
     "px2rpx-loader": "^0.1.8",
     "rimraf": "^2.6.0",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
+    "style-loader": "^0.20.3",
     "url-loader": "^0.5.8",
     "vue-loader": "^14.2.2",
     "vue-style-loader": "^3.0.1",
@@ -75,7 +76,8 @@
     "webpack-bundle-analyzer": "^2.2.1",
     "webpack-dev-middleware-hard-disk": "^1.10.0",
     "webpack-merge": "^4.1.0",
-    "webpack-mpvue-asset-plugin": "^0.0.1"
+    "webpack-mpvue-asset-plugin": "^0.0.1",
+    "weui-wxss": "^1.1.1"
   },
   "engines": {
     "node": ">= 4.0.0",
