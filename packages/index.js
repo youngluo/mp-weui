@@ -1,3 +1,6 @@
+import '../utils/assign';
+// import '../node_modules/weui-wxss/dist/style/weui.wxss';
+import '../weui/weui.css';
 import Actionsheet from './actionsheet';
 import Badge from './badge';
 import Cell from './cell';
@@ -19,9 +22,6 @@ import Radio from './radio';
 import Search from './search';
 import Slider from './slider';
 import Switch from './switch';
-import '../utils/assign';
-import '../weui-wxss/weui.css';
-// import '../node_modules/weui-wxss/dist/style/weui.wxss';
 
 const components = [
   Actionsheet,

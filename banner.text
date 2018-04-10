@@ -1,0 +1,8 @@
+<%= pkg.description %>
+
+Bundle of <%= pkg.name %>
+Date: <%= moment().format('YYYY-MM-DD') %>
+Version: <%= pkg.version %>
+Author: Young Luo
+
+Copyright © 2018 Young Luo.

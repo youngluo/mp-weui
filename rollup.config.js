@@ -1,31 +1,42 @@
-import vue from 'rollup-plugin-vue2'
-import buble from 'rollup-plugin-buble'
 import commonjs from 'rollup-plugin-commonjs'
+import filesize from 'rollup-plugin-filesize'
+import progress from 'rollup-plugin-progress'
 import postcss from 'rollup-plugin-postcss'
+import license from 'rollup-plugin-license'
 import uglify from 'rollup-plugin-uglify'
-// import wxss from 'postcss-mpvue-wxss'
+import buble from 'rollup-plugin-buble'
+import vue from 'rollup-plugin-vue2'
+import path from 'path'
+
+const SRC_PATH = path.join(__dirname, 'packages/index.js')
+const DEST_PATH = path.join(__dirname, 'lib/mp-weui.js')
+const STYLE_PATH = path.join(__dirname, 'lib/style.css')
+const BANNER_PATH = path.join(__dirname, 'banner.text')
 
 export default {
-  input: './packages/index.js',
+  input: SRC_PATH,
   output: {
-    file: './lib/mp-weui.js',
+    file: DEST_PATH,
     format: 'cjs',
-    sourcemap: false,
     exports: 'named'
   },
   plugins: [
     vue(),
     postcss({
-      extract: './lib/style.css',
-      minimize: true
-      // plugins: [
-      //   wxss
-      // ]
+      extract: STYLE_PATH
     }),
     buble(),
     commonjs({
       extensions: ['.js', '.vue']
     }),
-    uglify()
+    uglify(),
+    license({
+      banner: {
+        file: BANNER_PATH,
+        encoding: 'utf-8'
+      }
+    }),
+    progress(),
+    filesize()
   ]
 }
