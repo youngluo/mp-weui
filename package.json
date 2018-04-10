@@ -11,6 +11,7 @@
     "prerelease": "node_modules/.bin/rimraf lib && npm run copy",
     "release": "node_modules/.bin/rollup -c rollup.config.js",
     "postrelease": "node_modules/.bin/cleancss -o lib/style.min.css lib/style.css",
+    "docs:start": "docsify start docs",
     "lint": "eslint --ext .js,.vue src"
   },
   "repository": {

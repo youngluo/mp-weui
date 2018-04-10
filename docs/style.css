@@ -1,0 +1,38 @@
+body {
+  font-size: 14px;
+}
+
+.table-container {
+  overflow: auto;
+}
+
+table {
+  display: table !important;
+  max-width: 100%;
+  text-align: left;
+}
+
+th {
+  min-width: 100px;
+  white-space: nowrap;
+}
+
+th:nth-child(1) {
+  width: 10%;
+}
+
+th:nth-child(2) {
+  width: 30%;
+}
+
+th:nth-child(3) {
+  width: 15%;
+}
+
+th:nth-child(4) {
+  width: 30%;
+}
+
+th:nth-child(5) {
+  width: 15%;
+}
