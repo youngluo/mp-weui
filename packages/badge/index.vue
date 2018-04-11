@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="['weui-badge', {'weui-badge_dot': !text}, wrapperClass]"
+    :class="['weui-badge', {'weui-badge_dot': !text}, wrapClassName]"
     :style="{backgroundColor: color}"
     v-text="text"
   />
@@ -14,7 +14,7 @@ export default {
       type: String,
       default: '#e64340',
     },
-    wrapperClass: String,
+    wrapClassName: String,
     text: String,
   },
 };

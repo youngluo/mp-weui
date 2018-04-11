@@ -2,7 +2,7 @@
   "name": "mp-weui",
   "version": "1.0.0",
   "description": "A mini program UI library based on mpvue and weui-wxss.",
-  "main": "lib/mp-weui.js",
+  "main": "packages/index.js",
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
@@ -11,7 +11,7 @@
     "prerelease": "node_modules/.bin/rimraf lib && npm run copy",
     "release": "node_modules/.bin/rollup -c rollup.config.js",
     "postrelease": "node_modules/.bin/cleancss -o lib/style.min.css lib/style.css",
-    "docs:start": "docsify start docs",
+    "docs": "docsify start docs",
     "lint": "eslint --ext .js,.vue src"
   },
   "repository": {
@@ -38,6 +38,7 @@
     "babel-register": "^6.22.0",
     "chalk": "^2.0.1",
     "clean-css-cli": "^4.1.11",
+    "connect-history-api-fallback": "^1.5.0",
     "copy-webpack-plugin": "^4.0.1",
     "cpy-cli": "^1.0.1",
     "css-loader": "^0.28.0",

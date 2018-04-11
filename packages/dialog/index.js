@@ -1,3 +1,5 @@
+import assign from '../../utils/assign';
+
 function Dialog(options) {
   delete options.complete;
   delete options.fail;
@@ -19,7 +21,7 @@ Dialog.alert = (content, title = '', options) => {
     title = '';
   }
 
-  options = Object.assign({ content, title }, options);
+  options = assign({ content, title }, options);
   options.showCancel = false;
 
   Dialog(options);
@@ -31,7 +33,7 @@ Dialog.confirm = (content, title = '', options) => {
     title = '';
   }
 
-  options = Object.assign({ content, title }, options);
+  options = assign({ content, title }, options);
   options.showCancel = true;
 
   Dialog(options);

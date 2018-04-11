@@ -1,0 +1,17 @@
+build/
+config/
+dist/
+docs/
+node_modules/
+src/
+static/
+weui/
+lib/mp-weui.js
+.editorconfig
+.eslintignore
+.eslintrc.js
+.postcssrc.js
+banner.text
+index.html
+project.config.json
+npm-debug.log

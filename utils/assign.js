@@ -1,28 +1,20 @@
-if (typeof Object.assign !== 'function') {
-  Object.defineProperty(Object, 'assign', {
-    value: function assign(...args) {
-      const target = Object(args[0]);
-      const len = args.length;
+export default function assign(...args) {
+  const target = Object(args[0]);
+  const len = args.length;
 
-      if (!target) {
-        throw new TypeError('Cannot convert undefined or null to object');
-      }
+  for (let index = 1; index < len; index++) {
+    const nextSource = args[index] || {};
 
-      for (let index = 1; index < len; index++) {
-        const nextSource = args[index];
+    for (const nextKey in nextSource) {
+      if (nextSource.hasOwnProperty(nextKey)) {
+        const value = nextSource[nextKey];
 
-        if (nextSource) {
-          for (const nextKey in nextSource) {
-            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
-              target[nextKey] = nextSource[nextKey];
-            }
-          }
+        if (value !== undefined) {
+          target[nextKey] = value;
         }
       }
+    }
+  }
 
-      return target;
-    },
-    writable: true,
-    configurable: true,
-  });
+  return target;
 }

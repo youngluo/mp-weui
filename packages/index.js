@@ -1,4 +1,3 @@
-import '../utils/assign';
 // import '../node_modules/weui-wxss/dist/style/weui.wxss';
 import '../weui/weui.css';
 import Actionsheet from './actionsheet';

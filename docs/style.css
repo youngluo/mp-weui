@@ -15,6 +15,7 @@ table {
 th {
   min-width: 100px;
   white-space: nowrap;
+  background-color: #f5f6f7;
 }
 
 th:nth-child(1) {
@@ -35,4 +36,8 @@ th:nth-child(4) {
 
 th:nth-child(5) {
   width: 15%;
+}
+
+.markdown-section tr:nth-child(2n) {
+  background-color: inherit;
 }
