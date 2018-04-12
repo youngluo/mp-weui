@@ -42,10 +42,10 @@
 
 名称 | 说明 | 类型 | 可选值 | 默认值
 - | - | - | - | -
-content | 显示内容 | String |  |
-iconSrc | 图标链接 | String  |  |
-label | 说明文字 | String  |  |
-href | 跳转链接 | String  |  |
+content | 显示内容 | string |  |
+iconSrc | 图标链接 | string  |  |
+label | 说明文字 | string  |  |
+href | 跳转链接 | string  |  |
 
 ## Events
 

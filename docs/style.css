@@ -23,19 +23,19 @@ th:nth-child(1) {
 }
 
 th:nth-child(2) {
-  width: 30%;
+  width: 50%;
 }
 
 th:nth-child(3) {
-  width: 15%;
+  width: 10%;
 }
 
 th:nth-child(4) {
-  width: 30%;
+  width: 20%;
 }
 
 th:nth-child(5) {
-  width: 15%;
+  width: 10%;
 }
 
 .markdown-section tr:nth-child(2n) {

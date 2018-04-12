@@ -12,7 +12,10 @@
         :key="item.text"
       />
     </div>
-    <p class="weui-footer__text" v-text="text"/>
+    <p
+      class="weui-footer__text"
+      v-text="text"
+    />
   </div>
 </template>
 

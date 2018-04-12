@@ -9,7 +9,7 @@
 
       <mp-loadmore />
 
-      <mp-loadmore type="lineDot"/>
+      <mp-loadmore type="lineDot" />
     </div>
   </div>
 </template>

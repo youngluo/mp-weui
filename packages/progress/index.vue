@@ -16,11 +16,11 @@
       v-if="showCancel"
     >
       <icon
-        @click="$emit('onCancel')"
+        @click="$emit('onCancel', $event)"
         :size="cancelSize"
         type="cancel"
       />
-  </div>
+    </div>
   </div>
 </template>
 
@@ -30,7 +30,7 @@ export default {
   props: {
     backgroundColor: {
       type: String,
-      default: '#EBEBEB',
+      default: '#ebebeb',
     },
     animateMode: {
       type: String,
@@ -38,7 +38,7 @@ export default {
     },
     color: {
       type: String,
-      default: '#09BB07',
+      default: '#09bb07',
     },
     width: {
       type: Number,
@@ -48,10 +48,10 @@ export default {
       type: Number,
       default: 22,
     },
-    percent: [Number, String],
     showCancel: Boolean,
     showInfo: Boolean,
     animate: Boolean,
+    percent: Number,
   },
 };
 </script>

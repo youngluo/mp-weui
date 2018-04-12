@@ -5,13 +5,23 @@
       <div class="page__desc">页脚</div>
     </div>
     <div class="page__bd page__bd_spacing">
-      <mp-footer :text="text"></mp-footer>
+      <mp-footer :text="text" />
 
-      <mp-footer :text="text" :links="links"></mp-footer>
+      <mp-footer
+        :text="text"
+        :links="links"
+      />
 
-      <mp-footer :text="text" :links="links2"></mp-footer>
+      <mp-footer
+        :text="text"
+        :links="links2"
+      />
 
-      <mp-footer :text="text" :links="links3" fixed></mp-footer>
+      <mp-footer
+        :text="text"
+        :links="links3"
+        fixed
+      />
     </div>
   </div>
 </template>
@@ -23,7 +33,7 @@ export default {
   data() {
     return {
       links2: [{ link: '/a', text: '底部链接' }, { link: '/b', text: '底部链接' }],
-      links3: [{ link: '/c', text: 'WeUI首页' }],
+      links3: [{ link: '/c', text: 'mp-weui首页' }],
       links: [{ link: '/a', text: '底部链接' }],
       text: 'Copyright © 2008-2016 weui.io',
     };

@@ -26,6 +26,6 @@
 
 名称 | 说明 | 类型 | 可选值 | 默认值
 - | - | - | - | -
-color | 自定义颜色 | String |  | #e64340
-text | 自定义文本 | String  |  |
-wrapClassName | 外层容器的类名 | String  |  |
+color | 显示颜色 | string |  | #e64340
+text | 显示文本 | string  |  |
+wrapClassName | 外层容器的类名 | string  |  |

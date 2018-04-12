@@ -6,13 +6,7 @@
     </div>
     <div class="page__bd page__bd_spacing">
       <mp-progress
-        :percent="0"
-        show-cancel
-      />
-
-      <mp-progress
         :percent="50"
-        show-cancel
       />
 
       <mp-progress
@@ -21,6 +15,7 @@
       />
 
       <mp-progress
+        @onCancel="onCancel"
         :percent="progress"
         show-cancel
         show-info
@@ -72,6 +67,9 @@ export default {
       setTimeout(() => {
         this.next();
       }, 300);
+    },
+    onCancel(e) {
+      console.log(e);
     },
   },
 };
