@@ -2,7 +2,7 @@
   <a
     :class="['weui-cell', {'weui-cell_access': !!href}]"
     :hover-class="!!href ? 'weui-cell_active' : 'none'"
-    @click="onClick"
+    @click="$emit('click')"
     :href="href"
   >
     <div class="weui-cell_hd">
@@ -35,11 +35,6 @@ export default {
     iconSrc: String,
     label: String,
     href: String,
-  },
-  methods: {
-    onClick() {
-      this.$emit('click');
-    },
   },
 };
 </script>

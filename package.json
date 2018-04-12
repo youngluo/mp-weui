@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/youngluo/mp-weui#readme",
   "author": "Young Luo",
-  "dependencies": {},
+  "dependencies": {
+    "weui-wxss": "^1.1.1"
+  },
   "peerDependencies": {
     "mpvue": "^1.0.6"
   },
@@ -90,8 +92,7 @@
     "webpack-bundle-analyzer": "^2.2.1",
     "webpack-dev-middleware-hard-disk": "^1.10.0",
     "webpack-merge": "^4.1.0",
-    "webpack-mpvue-asset-plugin": "^0.0.1",
-    "weui-wxss": "^1.1.1"
+    "webpack-mpvue-asset-plugin": "^0.0.1"
   },
   "engines": {
     "node": ">= 4.0.0",
