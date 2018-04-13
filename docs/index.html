@@ -15,23 +15,31 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: 'mp-weui',
+      name: 'MP-WeUI',
+      formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
       repo: 'https://github.com/youngluo/mp-weui',
       coverpage: true,
       onlyCover: true,
       loadSidebar: true,
+      auto2top: true,
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <script>
     window.onload = function () {
-      [].slice.call(document.querySelectorAll('table')).forEach(function (el) {
-        var wrapper = document.createElement('div');
-        wrapper.className = 'table-container';
-        el.parentNode.insertBefore(wrapper, el);
-        el.parentNode.removeChild(el);
-        wrapper.appendChild(el);
-      })
+      var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver
+      var target = document.getElementById('main');
+      new MutationObserver(function (mutations) {
+        mutations[0].addedNodes.forEach(function (el) {
+          if (el.nodeName === 'TABLE') {
+            var wrapper = document.createElement('div');
+            wrapper.className = 'table-container';
+            el.parentNode.insertBefore(wrapper, el);
+            el.parentNode.removeChild(el);
+            wrapper.appendChild(el);
+          }
+        })
+      }).observe(target, { childList: true, subtree: true });
     }
   </script>
 </body>
