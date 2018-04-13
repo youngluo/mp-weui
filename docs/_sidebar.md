@@ -5,6 +5,7 @@
 * [Footer](/footer)
 * [Grid](/grid)
 * [Loadmore](/loadmore)
+* [Navbar](/navbar)
 * [Progress](/progress)
 * 操作反馈
 * [Actionsheet](/actionsheet)

@@ -15,7 +15,6 @@
       />
 
       <mp-progress
-        @onCancel="onCancel"
         :percent="progress"
         show-cancel
         show-info
@@ -67,9 +66,6 @@ export default {
       setTimeout(() => {
         this.next();
       }, 300);
-    },
-    onCancel(e) {
-      console.log(e);
     },
   },
 };

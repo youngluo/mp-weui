@@ -13,6 +13,7 @@
         >
           <button type="default">单列选择器</button>
         </mp-picker>
+
         <p class="page__desc">当前值：{{mValue}}</p>
         <mp-picker
           v-model="mValue"
@@ -21,6 +22,7 @@
         >
           <button type="default">多列选择器</button>
         </mp-picker>
+
         <p class="page__desc">当前值：{{mValue2}}</p>
         <mp-picker
           v-model="mValue2"

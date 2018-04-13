@@ -34,16 +34,16 @@
 
     Dialog.confirm(content, title, options)
 
-## options
+## Options
 
 名称 | 说明 | 类型 | 可选值 | 默认值
 -- | -- | -- | -- | --
 title | 提示标题 | string |  |
 content | 提示内容 | string  |  |
 showCancel | 是否显示取消按钮 | boolean  |  | true
-cancelText | 取消按钮的文字，最多 4 个字符 | string  |  | 取消
-cancelColor | 取消按钮的文字颜色 | HexColor  |  | #000
-confirmText | 确定按钮的文字，最多 4 个字符 | string  |  | 确定
-confirmColor | 确定按钮的文字颜色 | HexColor  |  | #3cc51f
+cancelText | 取消按钮文字，最多 4 个字符 | string  |  | 取消
+cancelColor | 取消按钮文字颜色 | HexColor  |  | #000
+confirmText | 确定按钮文字，最多 4 个字符 | string  |  | 确定
+confirmColor | 确定按钮文字颜色 | HexColor  |  | #3cc51f
 onOk | 点击确定回调 | function(e)  |  |
 onCancel | 点击取消回调 | function(e)  |  |
