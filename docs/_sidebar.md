@@ -1,4 +1,9 @@
 * [介绍](/guide)
+* 表单组件
+* [Checklist](/checklist)
+<!-- * [Field](/field) -->
+* [Radio](/radio)
+<!-- * [Switch](/switch) -->
 * 基础组件
 * [Badge](/badge)
 * [Cell](/cell)
