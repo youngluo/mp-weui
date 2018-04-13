@@ -6,9 +6,9 @@ function Dialog(options) {
 
   options.success = (res) => {
     if (res.confirm) {
-      options.onOk && options.onOk();
+      options.onOk && options.onOk(res);
     } else {
-      options.onCancel && options.onCancel();
+      options.onCancel && options.onCancel(res);
     }
   };
 

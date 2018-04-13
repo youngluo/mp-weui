@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="wrapperClass"
+    :class="wrapClassName"
     @click="onClick"
   >
     <slot />
@@ -15,7 +15,7 @@ export default {
       type: String,
       default: '#000',
     },
-    wrapperClass: String,
+    wrapClassName: String,
     actions: Array,
     value: Number,
   },

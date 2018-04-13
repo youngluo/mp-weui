@@ -25,7 +25,7 @@
 ## Props
 
 名称 | 说明 | 类型 | 可选值 | 默认值
-- | - | - | - | -
+-- | -- | -- | -- | --
 type | 类型 | string | `line`、`lineDot`、`loading` | line
 loadingText | `type` 为loading时，可自定义显示文本 | string  |  | 正在加载
 notContent | `type` 为line时，当数据为空时显示的内容 | string  |  | 暂无数据

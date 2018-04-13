@@ -41,7 +41,7 @@
 ## Props
 
 名称 | 说明 | 类型 | 可选值 | 默认值
-- | - | - | - | -
+-- | -- | -- | -- | --
 content | 显示内容 | string |  |
 iconSrc | 图标链接 | string  |  |
 label | 说明文字 | string  |  |
@@ -50,7 +50,7 @@ href | 跳转链接 | string  |  |
 ## Events
 
 名称 | 说明 | 回调参数
-- | - | - |
+-- | -- | -- |
 click | 点击事件 | event
 
 ## Slot
@@ -59,6 +59,6 @@ click | 点击事件 | event
 
 名称 | 说明 |
 -- | -- |
-- | 自定义显示内容
+-- | 自定义显示内容
 icon | 自定义图标
 label | 自定义说明内容

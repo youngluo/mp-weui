@@ -2,7 +2,7 @@
   <a
     :class="['weui-cell', {'weui-cell_access': !!href}]"
     :hover-class="!!href ? 'weui-cell_active' : 'none'"
-    @click="$emit('click')"
+    @click="$emit('click', $event)"
     :href="href"
   >
     <div class="weui-cell_hd">

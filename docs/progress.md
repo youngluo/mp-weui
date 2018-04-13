@@ -28,7 +28,7 @@
 ## Props
 
 名称 | 说明 | 类型 | 可选值 | 默认值
-- | - | - | - | -
+-- | -- | -- | -- | --
 percent | 进度百分比0 - 100 | number |  |
 backgroundColor | 进度条背景颜色 | string |  | #ebebeb
 color | 进度条颜色  | string |  | #09bb07
@@ -42,5 +42,5 @@ showInfo | 是否在进度条右侧显示百分比  | boolean |  | false
 ## Events
 
 名称 | 说明 | 回调参数
-- | - | - |
+-- | -- | -- |
 onCancel | 点击取消按钮事件 | event

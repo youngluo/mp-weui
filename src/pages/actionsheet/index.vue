@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import Actionsheet from '../../../packages/actionsheet';
+import mpActionsheet from '../../../packages/actionsheet';
 
 export default {
   data() {
@@ -27,7 +27,7 @@ export default {
       value: '',
     };
   },
-  components: { mpActionsheet: Actionsheet },
+  components: { mpActionsheet },
 };
 </script>
 

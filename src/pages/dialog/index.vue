@@ -13,14 +13,14 @@
           type="default"
         >
           Confirm Dialog
-          </button>
-          <button
-            @click="openAlert"
-            class="weui-btn"
-            type="default"
-          >
-            Alert Dialog
-          </button>
+        </button>
+        <button
+          @click="openAlert"
+          class="weui-btn"
+          type="default"
+        >
+          Alert Dialog
+        </button>
       </div>
     </div>
   </div>
