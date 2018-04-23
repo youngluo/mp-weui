@@ -5,83 +5,45 @@
       <div class="page__desc">上传组件</div>
     </div>
     <div class="page__bd">
-      <div class="weui-cells">
-        <div class="weui-cell">
-          <div class="weui-cell__bd">
-            <div class="weui-uploader">
-              <div class="weui-uploader__hd">
-                <div class="weui-uploader__title">图片上传</div>
-                <div class="weui-uploader__info">{{files.length}}/2</div>
-              </div>
-              <div class="weui-uploader__bd">
-                <div class="weui-uploader__files" id="uploaderFiles">
-                  <div v-for="item in files" :key="item">
-                    <div class="weui-uploader__file" @click="previewImage" :id="item">
-                      <img class="weui-uploader__img" :src="item" mode="aspectFill" />
-                    </div>
-                  </div>
-                  <!-- <div class="weui-uploader__file">
-                    <img class="weui-uploader__img" src="/static/images/pic_160.png" mode="aspectFill" />
-                  </div>
-                  <div class="weui-uploader__file">
-                    <img class="weui-uploader__img" src="/static/images/pic_160.png" mode="aspectFill" />
-                  </div>
-                  <div class="weui-uploader__file">
-                    <img class="weui-uploader__img" src="/static/images/pic_160.png" mode="aspectFill" />
-                  </div>
-                  <div class="weui-uploader__file weui-uploader__file_status">
-                    <img class="weui-uploader__img" src="/static/images/pic_160.png" mode="aspectFill" />
-                    <div class="weui-uploader__file-content">
-                      <icon type="warn" size="23" color="#F43530"></icon>
-                    </div>
-                  </div> -->
-                  <div class="weui-uploader__file weui-uploader__file_status">
-                    <img class="weui-uploader__img" src="/static/images/pic_160.png" mode="aspectFill" />
-                    <div class="weui-uploader__file-content">50%</div>
-                  </div>
-                </div>
-                <div class="weui-uploader__input-box">
-                  <div class="weui-uploader__input" @click="chooseImage"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <mp-uploader-base
+        :file-list="files"
+        title="文件上传"
+        @onAdd="add"
+        :max="max"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import Vue from 'vue';
+import MpUploaderBase from '../../../packages/uploader-base';
+
 export default {
   data() {
     return {
       files: [],
+      max: 3,
     };
   },
+  components: {
+    MpUploaderBase,
+  },
   methods: {
-    chooseImage() {
+    add() {
       wx.chooseImage({
-        sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
-        sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+        sizeType: ['original', 'compressed'],
+        sourceType: ['album', 'camera'],
+        count: this.max,
         success: (res) => {
-          console.log(res);
-          // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
-          this.files = this.files.concat(res.tempFilePaths);
+          this.files = this.files.concat(res.tempFiles);
+
+          if (this.files[0]) {
+            Vue.set(this.files[0], 'failure', true);
+          }
         },
-      });
-    },
-    previewImage(e) {
-      wx.previewImage({
-        current: e.currentTarget.id, // 当前显示图片的http链接
-        urls: this.data.files, // 需要预览的图片http链接列表
       });
     },
   },
 };
 </script>
-
-<style lang="less">
-
-</style>
-

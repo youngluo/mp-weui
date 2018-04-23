@@ -35,7 +35,7 @@
   - [x] Switch
   - [x] Field（待优化）
 - [x] Slider
-- [ ] Uploader
+- [x] Uploader
 
 ### 基础组件
 - [ ] Article
