@@ -22,7 +22,7 @@
 
 ## 文档
 
-即将上线...
+[文档地址](https://youngluo.github.io/mp-weui)
 
 ## 开发进度
 
