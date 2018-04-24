@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'mpPicker',
+  name: 'MpPicker',
   props: {
     value: [String, Array],
     rangeKey: String,

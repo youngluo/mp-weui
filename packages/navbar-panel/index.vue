@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'mpNavbarPanel',
+  name: 'MpNavbarPanel',
   props: {
     activeIndex: Number,
     index: Number,

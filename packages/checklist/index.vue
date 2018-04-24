@@ -38,7 +38,7 @@
 
 <script>
 export default {
-  name: 'mpChecklist',
+  name: 'MpChecklist',
   props: {
     options: {
       type: Array,

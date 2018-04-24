@@ -28,7 +28,7 @@ export default {
       'pages/icons/main',
       'pages/loadmore/main',
       // 'pages/panel/main',
-      // 'pages/preview/main',
+      'pages/preview/main',
       'pages/progress/main',
       'pages/actionsheet/main',
       'pages/dialog/main',

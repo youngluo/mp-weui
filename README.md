@@ -47,7 +47,7 @@
 - [x] Icons（小程序原生组件）
 - [x] Loadmore
 - [ ] Panel
-- [ ] Preview
+- [x] Preview
 - [x] Progress
 
 ### 操作反馈

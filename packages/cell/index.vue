@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  name: 'mpCell',
+  name: 'MpCell',
   props: {
     content: String,
     iconSrc: String,

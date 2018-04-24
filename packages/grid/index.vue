@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'mpGrid',
+  name: 'MpGrid',
   props: {
     iconSrc: String,
     label: String,

@@ -69,7 +69,7 @@
 
 <script>
 export default {
-  name: 'mpField',
+  name: 'MpField',
   props: {
     type: {
       type: String,

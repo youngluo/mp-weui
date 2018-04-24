@@ -57,7 +57,7 @@ export default {
             'icons',
             'loadmore',
             'panel',
-            'prediv',
+            'preview',
             'progress',
           ],
         },
