@@ -1,5 +1,9 @@
  # mp-weui
 
+[![npm](https://img.shields.io/npm/v/mp-weui.svg)](https://www.npmjs.com/package/mp-weui)
+[![npm](https://img.shields.io/npm/dm/mp-weui.svg)](https://www.npmjs.com/package/mp-weui)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/youngluo/mp-weui/blob/master/LICENSE)
+
 > mp-weui是基于[mpvue](https://github.com/Meituan-Dianping/mpvue)和[weui-wxss](https://github.com/Tencent/weui-wxss)封装的小程序UI库。
 
 ## 安装

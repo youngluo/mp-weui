@@ -2,6 +2,11 @@
   "name": "mp-weui",
   "version": "1.0.1",
   "description": "A mini program UI library based on mpvue and weui-wxss.",
+  "keywords": [
+    "mp-weui",
+    "mpvue",
+    "weui-wxss"
+  ],
   "main": "packages/index.js",
   "scripts": {
     "dev": "node build/dev-server.js",
@@ -25,12 +30,12 @@
   "homepage": "https://github.com/youngluo/mp-weui#readme",
   "author": "Young Luo",
   "dependencies": {
-    "weui-wxss": "^1.1.1"
   },
   "peerDependencies": {
     "mpvue": "^1.0.8"
   },
   "devDependencies": {
+    "weui-wxss": "^1.1.1",
     "clean-css-cli": "^4.1.11",
     "cpy-cli": "^1.0.1",
     "less": "^3.0.1",
