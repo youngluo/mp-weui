@@ -42,7 +42,7 @@
 - [x] Badge
 - [ ] Flex
 - [x] Footer
-- [ ] Gallery
+- [x] Gallery（小程序原生组件）
 - [x] Grid（待优化）
 - [x] Icons（小程序原生组件）
 - [x] Loadmore

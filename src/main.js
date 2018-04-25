@@ -23,7 +23,7 @@ export default {
       'pages/badge/main',
       // 'pages/flex/main',
       'pages/footer/main',
-      // 'pages/gallery/main',
+      'pages/gallery/main',
       'pages/grid/main',
       'pages/icons/main',
       'pages/loadmore/main',

@@ -1,6 +1,6 @@
 {
   "name": "mp-weui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A mini program UI library based on mpvue and weui-wxss.",
   "main": "packages/index.js",
   "scripts": {
