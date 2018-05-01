@@ -40,7 +40,7 @@
 
 <script>
 export default {
-  name: 'mpRadio',
+  name: 'MpRadio',
   props: {
     options: {
       type: Array,

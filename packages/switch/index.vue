@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: 'mpSwitch',
+  name: 'MpSwitch',
   props: {
     disabled: {
       type: Boolean,

@@ -26,7 +26,7 @@
 
 <script>
 export default {
-  name: 'mpProgress',
+  name: 'MpProgress',
   props: {
     backgroundColor: {
       type: String,

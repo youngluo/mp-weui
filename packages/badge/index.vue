@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'mpBadge',
+  name: 'MpBadge',
   props: {
     color: {
       type: String,

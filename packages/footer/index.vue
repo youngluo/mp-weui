@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'mpFooter',
+  name: 'MpFooter',
   props: {
     links: {
       type: Array,

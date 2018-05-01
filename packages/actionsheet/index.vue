@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'mpActionsheet',
+  name: 'MpActionsheet',
   props: {
     itemColor: {
       type: String,

@@ -39,7 +39,7 @@
 
 <script>
 export default {
-  name: 'mpMessage',
+  name: 'MpMessage',
   props: {
     type: {
       type: String,

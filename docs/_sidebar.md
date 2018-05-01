@@ -12,6 +12,7 @@
 * [Loadmore](/loadmore)
 * [Navbar](/navbar)
 * [Progress](/progress)
+* [Preview](/preview)
 * 操作反馈
 * [Actionsheet](/actionsheet)
 * [Dialog](/dialog)

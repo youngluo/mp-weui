@@ -41,6 +41,7 @@ module.exports = {
     'no-restricted-syntax': 0,
     'no-mixed-operators': 0,
     'no-param-reassign': 0,
+    'consistent-return': 0,
     'no-const-assign': 0,
     'no-multi-assign': 0,
     'no-plusplus': 0,

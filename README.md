@@ -1,5 +1,9 @@
  # mp-weui
 
+[![npm](https://img.shields.io/npm/v/mp-weui.svg)](https://www.npmjs.com/package/mp-weui)
+[![npm](https://img.shields.io/npm/dm/mp-weui.svg)](https://www.npmjs.com/package/mp-weui)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/youngluo/mp-weui/blob/master/LICENSE)
+
 > mp-weui是基于[mpvue](https://github.com/Meituan-Dianping/mpvue)和[weui-wxss](https://github.com/Tencent/weui-wxss)封装的小程序UI库。
 
 ## 安装
@@ -22,7 +26,7 @@
 
 ## 文档
 
-即将上线...
+[文档地址](https://youngluo.github.io/mp-weui)
 
 ## 开发进度
 
@@ -35,19 +39,19 @@
   - [x] Switch
   - [x] Field（待优化）
 - [x] Slider
-- [ ] Uploader
+- [x] Uploader
 
 ### 基础组件
 - [ ] Article
 - [x] Badge
 - [ ] Flex
 - [x] Footer
-- [ ] Gallery
+- [x] Gallery（小程序原生组件）
 - [x] Grid（待优化）
 - [x] Icons（小程序原生组件）
 - [x] Loadmore
 - [ ] Panel
-- [ ] Preview
+- [x] Preview
 - [x] Progress
 
 ### 操作反馈

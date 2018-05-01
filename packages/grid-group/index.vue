@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'mpGridGroup',
+  name: 'MpGridGroup',
 };
 </script>

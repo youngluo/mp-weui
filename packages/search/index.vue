@@ -54,7 +54,7 @@
 
 <script>
 export default {
-  name: 'mpSearch',
+  name: 'MpSearch',
   props: {
     confirmType: {
       type: String,

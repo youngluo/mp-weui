@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'mpLoadmore',
+  name: 'MpLoadmore',
   props: {
     type: {
       type: String,

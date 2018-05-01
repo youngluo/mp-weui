@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: 'mpNavbar',
+  name: 'MpNavbar',
   props: {
     columns: {
       required: true,
