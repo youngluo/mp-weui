@@ -41,7 +41,7 @@ export default {
           id: 'form',
           name: '表单',
           open: false,
-          pages: ['button', 'list', 'input', 'slider', 'uploader'],
+          pages: ['button', 'list', 'input', 'switch', 'checklist', 'radio', 'slider', 'uploader'],
         },
         {
           id: 'widget',

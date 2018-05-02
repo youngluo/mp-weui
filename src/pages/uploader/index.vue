@@ -6,9 +6,9 @@
     </div>
     <div class="page__bd">
       <mp-uploader-base
+        @onSelect="onSelect"
         :file-list="files"
         title="文件上传"
-        @onAdd="add"
         :max="max"
       />
     </div>
@@ -30,7 +30,7 @@ export default {
     MpUploaderBase,
   },
   methods: {
-    add() {
+    onSelect() {
       wx.chooseImage({
         sizeType: ['original', 'compressed'],
         sourceType: ['album', 'camera'],

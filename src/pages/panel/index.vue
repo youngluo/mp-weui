@@ -62,7 +62,6 @@
       </div> -->
     </div>
   </div>
-
 </template>
 
 <script>
@@ -95,8 +94,8 @@ export default {
           title: '标题一',
           content: '由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。',
           meta: [
-            { value: '文字来源' },
-            { value: '时间' },
+            '文字来源',
+            '时间',
             { value: '其它信息', divider: true },
           ],
         },
@@ -104,8 +103,8 @@ export default {
           title: '标题一',
           content: '由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。',
           meta: [
-            { value: '文字来源' },
-            { value: '时间' },
+            '文字来源',
+            '时间',
             { value: '其它信息', divider: true },
           ],
         },

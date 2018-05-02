@@ -3,7 +3,8 @@
 * [Checklist](/checklist)
 <!-- * [Field](/field) -->
 * [Radio](/radio)
-<!-- * [Switch](/switch) -->
+* [Switch](/switch)
+* [Uploader](/uploader)
 * 基础组件
 * [Badge](/badge)
 * [Cell](/cell)
@@ -12,6 +13,7 @@
 * [Loadmore](/loadmore)
 * [Navbar](/navbar)
 * [Progress](/progress)
+* [Panel](/panel)
 * [Preview](/preview)
 * 操作反馈
 * [Actionsheet](/actionsheet)

@@ -50,7 +50,7 @@
 - [x] Grid（待优化）
 - [x] Icons（小程序原生组件）
 - [x] Loadmore
-- [ ] Panel
+- [x] Panel
 - [x] Preview
 - [x] Progress
 

@@ -15,9 +15,9 @@
   </div>
 
   <switch
+    @change="$emit('input', Boolean($event.target.value))"
     :color="disabledColor"
     :disabled="disabled"
-    @change="onChange"
     :checked="value"
     v-else
   />

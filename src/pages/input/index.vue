@@ -7,10 +7,6 @@
     <div class="page__bd">
       <div class="weui-toptips weui-toptips_warn" v-if="showTopTips">错误提示</div>
 
-      <mp-radio :options="radioOptions" :title="'单选列表项：' + radioValue" v-model="radioValue" />
-
-      <mp-checklist :options="checkboxOptions" :title="'复选列表项：' + JSON.stringify(checkboxValue)" v-model="checkboxValue" />
-
       <div class="weui-cells__title">表单</div>
       <div class="weui-cells weui-cells_after-title">
         <mp-field label="qq" placeholder="请输入qq"></mp-field>
@@ -59,12 +55,6 @@
       <div class="weui-cells__title">表单报错</div>
       <div class="weui-cells weui-cells_after-title">
         <mp-field label="卡号" placeholder="请输入卡号" type="number" state="warning"></mp-field>
-      </div>
-
-      <div class="weui-cells__title">开关</div>
-      <div class="weui-cells weui-cells_after-title">
-        <mp-switch :title="'标题文字：' + switchChecked" v-model="switchChecked" />
-        <mp-switch :title="'标题文字：' + switchChecked" v-model="switchChecked" disabled />
       </div>
 
       <div class="weui-cells__title">文本框：{{textInput}}</div>
@@ -133,28 +123,12 @@
 </template>
 
 <script>
-import mpChecklist from '../../../packages/checklist';
-import mpSwitch from '../../../packages/switch';
 import mpField from '../../../packages/field';
-import mpRadio from '../../../packages/radio';
 
 export default {
   data() {
     return {
       showTopTips: false,
-      radioOptions: [
-        { label: 'cell standard', value: 'a', disabled: true },
-        { label: 'cell standard', value: 'b' },
-        { label: 'cell standard', value: 'c' },
-      ],
-      radioValue: 'b',
-      checkboxOptions: [
-        { label: 'standard is dealt for u.', value: 'a', disabled: true },
-        { label: 'standard is dealicient for u.', value: 'b' },
-        { label: 'standard is dealicient for u.', value: 'c' },
-      ],
-      checkboxValue: ['a'],
-      switchChecked: true,
       textInput: '',
       textTextarea: '',
 
@@ -174,10 +148,7 @@ export default {
     };
   },
   components: {
-    mpChecklist,
-    mpSwitch,
     mpField,
-    mpRadio,
   },
   methods: {
     showTopTips() {

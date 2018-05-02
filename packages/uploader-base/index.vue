@@ -50,7 +50,7 @@
               <div class="weui-uploader__input-box">
                 <div
                   class="weui-uploader__input"
-                  @click="$emit('onAdd')"
+                  @click="$emit('onSelect')"
                 />
               </div>
             </div>
