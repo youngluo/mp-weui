@@ -17,9 +17,9 @@
     "release": "node_modules/.bin/rollup -c rollup.config.js",
     "postrelease": "node_modules/.bin/cleancss -o lib/style.min.css lib/style.css",
     "publish": "npm publish && git push && git push --tags",
-    "patch": "npm version patch -m 'v%s' && npm run publish",
-    "minor": "npm version minor -m 'v%s'",
-    "major": "npm version major -m 'v%s'",
+    "patch": "npm version patch -m v%s && npm run publish",
+    "minor": "npm version minor -m v%s && npm run publish",
+    "major": "npm version major -m v%s && npm run publish",
     "docs": "docsify start docs",
     "lint": "eslint --ext .js,.vue src"
   },
