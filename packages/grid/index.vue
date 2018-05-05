@@ -5,20 +5,18 @@
     class="weui-grid"
     :href="href"
   >
-    <div class="weui-grid__icon">
-      <!-- <slot> -->
+    <!-- <slot> -->
       <img
-        class="weui-grid__icon-img"
+        class="weui-grid__icon"
         :src="iconSrc"
       />
-      <!-- </slot> -->
-    </div>
+    <!-- </slot> -->
     <div class="weui-grid__label">
       <!-- <slot name="label"> -->
       <span v-text="label" />
       <!-- </slot> -->
     </div>
-  </a>
+    </a>
 </template>
 
 <script>
@@ -31,12 +29,4 @@ export default {
   },
 };
 </script>
-
-<style lang="less">
-.weui-grid__icon-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-</style>
 

@@ -1,7 +1,7 @@
 {
   "name": "mp-weui",
   "version": "1.0.2",
-  "description": "A mini program UI library based on mpvue and weui-wxss.",
+  "description": "A mini program UI library based on mpvue and weui-wxss",
   "keywords": [
     "mp-weui",
     "mpvue",

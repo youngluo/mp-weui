@@ -41,7 +41,7 @@ export default {
           id: 'form',
           name: '表单',
           open: false,
-          pages: ['button', 'list', 'input', 'switch', 'checklist', 'radio', 'slider', 'uploader'],
+          pages: ['button', 'checklist', 'input', 'radio', 'slider', 'switch', 'uploader'],
         },
         {
           id: 'widget',
@@ -55,6 +55,7 @@ export default {
             'gallery',
             'grid',
             'icons',
+            'list',
             'loadmore',
             'panel',
             'preview',

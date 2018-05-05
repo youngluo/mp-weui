@@ -3,7 +3,7 @@
     v-if="activeIndex === index"
     class="weui-tab__content"
   >
-    <slot></slot>
+    <slot />
   </div>
 </template>
 

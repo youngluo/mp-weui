@@ -61,7 +61,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style>
 .weui-check__label_disabled-radio {
   color: rgba(0, 0, 0, 0.3);
 }
