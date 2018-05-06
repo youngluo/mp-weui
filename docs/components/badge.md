@@ -4,11 +4,11 @@
 
 ## 引入
 
-    import mpBadge from 'mp-weui/packages/badge'
+    import MpBadge from 'mp-weui/packages/badge'
 
     export default {
       components: {
-        mpBadge
+        MpBadge
       }
     }
 

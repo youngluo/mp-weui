@@ -4,11 +4,11 @@
 
 ## 引入
 
-    import mpActionsheet from 'mp-weui/packages/actionsheet'
+    import MpActionsheet from 'mp-weui/packages/actionsheet'
 
     export default {
       components: {
-        mpActionsheet
+        MpActionsheet
       }
     }
 
