@@ -63,7 +63,7 @@ export default {
 page {
   background-color: #ffffff;
 }
-.page__desc {
+.page__bd .page__desc {
   text-align: center;
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div class="page">
       <div class="page__hd">
-          <div class="page__title">WeUI</div>
-          <div class="page__desc">WeUI 是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信内网页和微信小程序量身设计，令用户的使用感知更加统一。</div>
+          <div class="page__title">MP-WeUI</div>
+          <div class="page__desc">MP-WeUI 是基于mpvue和weui-wxss封装的小程序UI库。</div>
       </div>
       <div class="page__bd page__bd_spacing">
           <div class="kind-list">
@@ -41,16 +41,16 @@ export default {
           id: 'form',
           name: '表单',
           open: false,
-          pages: ['button', 'checklist', 'input', 'radio', 'slider', 'switch', 'uploader'],
+          pages: ['button', 'checklist', 'field', 'radio', 'slider', 'switch', 'uploader'],
         },
         {
           id: 'widget',
           name: '基础组件',
           open: false,
           pages: [
-            'article',
+            // 'article',
             'badge',
-            'flex',
+            // 'flex',
             'footer',
             'gallery',
             'grid',

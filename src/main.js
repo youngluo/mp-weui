@@ -16,7 +16,7 @@ export default {
       '^pages/index/main',
       'pages/button/main',
       'pages/list/main',
-      'pages/input/main',
+      'pages/field/main',
       'pages/switch/main',
       'pages/checklist/main',
       'pages/radio/main',
