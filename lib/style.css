@@ -1038,24 +1038,3 @@ icon {
   color: #09BB07;
   white-space: nowrap;
 }
-
-.weui-cell__icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-  vertical-align: middle;
-}
-
-._textarea {
-  height: 75px;
-}
-
-.weui-grid__icon-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.weui-check__label_disabled-radio {
-  color: rgba(0, 0, 0, 0.3);
-}

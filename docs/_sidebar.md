@@ -1,8 +1,9 @@
 * [介绍](/guide)
 * 表单组件
 * [Checklist](/checklist)
-<!-- * [Field](/field) -->
+* [Field](/field)
 * [Radio](/radio)
+* [Slider](/slider)
 * [Switch](/switch)
 * [Uploader](/uploader)
 * 基础组件
@@ -12,9 +13,10 @@
 * [Grid](/grid)
 * [Loadmore](/loadmore)
 * [Navbar](/navbar)
-* [Progress](/progress)
 * [Panel](/panel)
 * [Preview](/preview)
+* [Progress](/progress)
+* [Search](/search)
 * 操作反馈
 * [Actionsheet](/actionsheet)
 * [Dialog](/dialog)

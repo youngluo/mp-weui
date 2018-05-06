@@ -93,7 +93,7 @@ export default {
     state: {
       type: String,
       validator(value) {
-        return ['success', 'warning', 'wrror'].indexOf(value) !== -1;
+        return ['success', 'warning', 'error'].indexOf(value) !== -1;
       },
     },
     type: {
