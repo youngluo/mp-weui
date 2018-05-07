@@ -4,22 +4,40 @@
 
 ## 引入
 
-    import mpFooter from 'mp-weui/packages/footer'
+``` js
+import MpFooter from 'mp-weui/packages/footer'
 
-    export default {
-      components: {
-        mpFooter
-      }
-    }
+export default {
+  components: {
+    MpFooter
+  }
+}
+```
 
 ## 示例
 
-    <mp-footer text="copyright © mp-weui" />
+``` html
+<mp-footer text="copyright © mp-weui" />
+```
 
 ## Props
 
-名称 | 说明 | 类型 | 可选值 | 默认值
--- | -- | -- | -- | --
-text | 显示文本 | string |  |
-fixed | 是否固定在页面底部 | boolean  |  | false
-links | 显示底部链接，`object`格式为`{link: string, text: string}` | object[]  |  | []
+### fixed
+
+* Type: `boolean`
+* Default: `false`
+
+是否固定在页面底部。
+
+### links
+
+* Type: `object[]`
+* Default: `[]`
+
+显示底部链接，`object` 格式为 `{ link: string, text: string }`。
+
+### text
+
+* Type: `string`
+
+显示文本。

@@ -1,6 +1,5 @@
 ---
 home: true
-# heroImage: /hero.png
 actionText: 起步 →
 actionLink: /components/checklist
 footer: MIT Licensed | Copyright © 2018 独孤求败

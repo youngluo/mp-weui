@@ -4,40 +4,67 @@
 
 ## 引入
 
-    import mpMessage from 'mp-weui/packages/message'
+``` js
+import MpMessage from 'mp-weui/packages/message'
 
-    export default {
-      components: {
-        mpMessage
-      }
-    }
+export default {
+  components: {
+    MpMessage
+  }
+}
+```
 
 ## 示例
 
-    <mp-message
-      confirm-text="推荐操作"
-      cancel-text="辅助操作"
-      content="内容详情"
-      title="操作成功"
-      show-cancel
-    />
+``` html
+<mp-message
+  confirm-text="推荐操作"
+  cancel-text="辅助操作"
+  content="内容详情"
+  title="操作成功"
+  show-cancel
+/>
+```
 
 ## Props
 
-名称 | 说明 | 类型 | 可选值 | 默认值
--- | -- | -- | -- | --
-type | 类型 | string | `success`、`error` | success
-content | 显示内容 | string  |  |
-title | 显示标题 | string  |  |
-confirmText | 确定按钮文字 | string  |  | 确定
-cancelText | 取消按钮文字 | string  |  | 取消
-showCancel | 是否显示取消按钮 | boolean  |  | false
+### cancelText
 
-## Slot
+* Type: `string`
+* Default: `取消`
 
-*暂不支持*
+取消按钮文字。
 
-名称 | 说明 |
--- | -- |
--- | 自定义显示内容
-icon | 自定义图标
+### confirmText
+
+* Type: `string`
+* Default: `确定`
+
+确定按钮文字。
+
+### content
+
+* Type: `string`
+
+显示内容。
+
+### showCancel
+
+* Type: `boolean`
+* Default: `false`
+
+是否显示取消按钮。
+
+### title
+
+* Type: `string`
+
+标题。
+
+### type
+
+* Type: `string`
+* Default: `success`
+* Option: `success`、`error`
+
+类型。

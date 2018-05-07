@@ -4,48 +4,59 @@
 
 ## 引入
 
-    import mpGrid from 'mp-weui/packages/grid'
+``` js
+import MpGrid from 'mp-weui/packages/grid'
 
-    export default {
-      components: {
-        mpGrid
-      }
-    }
+export default {
+  components: {
+    MpGrid
+  }
+}
+```
 
-!> 必须与 `GridGroup` 配合使用。
+::: tip 提示
+必须与 `GridGroup` 配合使用。
+:::
 
 ## 示例
 
-    <mp-grid-group>
-      <mp-grid
-        icon-src="/static/images/icon_tabbar.png"
-        label="Grid"
-      />
-    </mp-grid-group>
+``` html
+<mp-grid-group>
+  <mp-grid
+    icon-src="/static/images/icon_tabbar.png"
+    label="Grid"
+  />
+</mp-grid-group>
+```
 
-## 特别说明
-
-!> 同[Cell组件](/cell?id=%e7%89%b9%e5%88%ab%e8%af%b4%e6%98%8e)，具体使用请参考[示例代码](https://github.com/youngluo/mp-weui/blob/master/src/pages/grid/index.vue)。
+::: warning 特别说明
+由于 mpvue [暂不支持组件嵌套](https://trello.com/c/UKF5tFv9/34-%E6%94%AF%E6%8C%81%E6%9B%B4%E5%A4%8D%E6%9D%82%E7%9A%84-slot)，所以上述方式暂不适用，具体使用请参考[示例代码](https://github.com/youngluo/mp-weui/blob/master/src/pages/grid/index.vue)。
+:::
 
 ## Props
 
-名称 | 说明 | 类型 | 可选值 | 默认值
--- | -- | -- | -- | --
-iconSrc | 图标链接 | string  |  |
-label | 说明文字 | string  |  |
-href | 跳转链接 | string  |  |
+### href
+
+* Type: `string`
+
+跳转链接。
+
+### iconSrc
+
+* Type: `string`
+
+图标链接。
+
+### label
+
+* Type: `string`
+
+说明文字。
 
 ## Events
 
-名称 | 说明 | 回调参数
--- | -- | -- |
-click | 点击事件 | event
+### click
 
-## Slot
+* Parameter: `$event`
 
-*暂不支持*
-
-名称 | 说明 |
--- | -- |
--- | 自定义显示内容
-label | 自定义说明内容
+点击事件。

@@ -4,25 +4,29 @@
 [![npm](https://img.shields.io/npm/dm/mp-weui.svg)](https://www.npmjs.com/package/mp-weui)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/youngluo/mp-weui/blob/master/LICENSE)
 
-> mp-weui是基于[mpvue](https://github.com/Meituan-Dianping/mpvue)和[weui-wxss](https://github.com/Tencent/weui-wxss)封装的小程序UI库。
+> mp-weui 是基于 [mpvue](https://github.com/Meituan-Dianping/mpvue) 和 [weui-wxss](https://github.com/Tencent/weui-wxss) 的微信小程序 UI 库。
 
 ## 安装
 
-    npm install mp-weui -S
+``` bash
+npm i -S mp-weui
+```
 
 ## 使用
 
-    import 'mp-weui/lib/style.css'; // 需在App.vue中全局引入css文件
+``` bash
+# 在 App.vue 中全局引入 css 文件
+import 'mp-weui/lib/style.css'
 
-由于mpvue限制（component暂不支持全局注册、复杂slot）暂时只能使用下面的方式局部注册组件：
+# 由于 mpvue component 暂不支持全局注册，暂时只能使用局部注册
+import MpRadio from 'mp-weui/packages/radio'
 
-    import Radio from 'mp-weui/packages/radio'
-
-    export default {
-      components: {
-        mpRadio
-      }
-    }
+export default {
+  components: {
+    MpRadio
+  }
+}
+```
 
 ## 文档
 
@@ -32,23 +36,20 @@
 
 ### 表单
 - [x] Button（小程序原生组件）
-- [x] List（待优化）
-- [x] Input
-  - [x] Checklist
-  - [x] Radio
-  - [x] Switch
-  - [x] Field（待优化）
+- [x] Checklist
+- [x] Field（待优化）
+- [x] Radio
 - [x] Slider
+- [x] Switch
 - [x] Uploader
 
 ### 基础组件
-- [ ] Article
 - [x] Badge
-- [ ] Flex
 - [x] Footer
 - [x] Gallery（小程序原生组件）
 - [x] Grid（待优化）
 - [x] Icons（小程序原生组件）
+- [x] List（待优化）
 - [x] Loadmore
 - [x] Panel
 - [x] Preview

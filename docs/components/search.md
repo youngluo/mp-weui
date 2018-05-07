@@ -4,37 +4,69 @@
 
 ## 引入
 
-    import MpSearch from 'mp-weui/packages/search'
+``` js
+import MpSearch from 'mp-weui/packages/search'
 
-    export default {
-      components: {
-        MpSearch
-      }
-    }
+export default {
+  components: {
+    MpSearch
+  }
+}
+```
 
 ## 示例
 
-    <mp-search
-      @confirm="onSearchConfirm"
-      @change="onSearchChange"
-    />
+``` html
+<mp-search
+  @confirm="onSearchConfirm"
+  @change="onSearchChange"
+/>
+```
 
-## 特别说明
-
-!>  使用 `v-model` 可能会出现光标闪烁情况，请使用 `change` 事件代替。
+::: warning 特别说明
+使用 `v-model` 可能会出现光标闪烁情况，请使用 `change` 事件代替。
+:::
 
 ## Props
 
-名称 | 说明 | 类型 | 可选值 | 默认值
--- | -- | -- | -- | --
-value | 绑定值 | string |  |
-confirmType | 设置键盘右下角按钮的文字 | string  | `send`,`search`,`next`,`go`,`done` | done
-placeholder | 输入框为空时占位符 | string  |  | 搜索
-cancelText | 取消按钮文本 | string  |  | 取消
+### cancelText
+
+* Type: `string`
+* Default: `取消`
+
+取消按钮文本。
+
+### confirmType
+
+* Type: `string`
+* Default: `done`
+* Option: `send → 发送`、`search → 搜索`、`next → 下一个`、`go → 前往`、`done → 完成`
+
+设置键盘右下角按钮的文字。
+
+### placeholder
+
+* Type: `string`
+* Default: `搜索`
+
+输入框为空时占位符。
+
+### value
+
+* Type: `string`
+
+绑定值。
 
 ## Events
 
-名称 | 说明 | 回调参数
--- | -- | -- |
-change | 输入框数据变化时触发事件 | value
-confirm | 点击键盘右下角按钮时触发事件 | value
+### change
+
+* Parameter: `value`
+
+输入框数据变化时触发事件。
+
+### confirm
+
+* Parameter: `value`
+
+点击键盘右下角按钮时触发事件。
