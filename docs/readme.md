@@ -1,7 +1,7 @@
 ---
 home: true
 # heroImage: /code.jpg
-actionText: 起步 →
+actionText: 开始 →
 actionLink: /components/checklist
 footer: MIT Licensed | Copyright © 2018 独孤求败
 ---
@@ -24,7 +24,7 @@ export default {
   }
 }
 ```
-### 扫码体验
+### 扫码查看示例
 
 <img
   style="display:block;width:100%;max-width:430px;margin:0 auto 60px;"

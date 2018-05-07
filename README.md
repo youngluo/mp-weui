@@ -32,6 +32,14 @@ export default {
 
 [文档地址](https://youngluo.github.io/mp-weui)
 
+## 扫码查看示例
+
+<img
+  style="display:block;width:100%;max-width:430px;margin:0 auto 60px;"
+  src=""
+  alt="小程序码"
+/>
+
 ## 开发进度
 
 ### 表单
