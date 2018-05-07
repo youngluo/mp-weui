@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/mp-weui/',
   title: 'MP-WeUI',
   description: '基于 mpvue 和 weui-wxss 的微信小程序 UI 库',
   head: [

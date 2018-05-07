@@ -32,11 +32,11 @@ export default {
 
 [文档地址](https://youngluo.github.io/mp-weui)
 
-## 扫码查看示例
+## 示例
 
 <img
   style="display:block;width:100%;max-width:430px;margin:0 auto 60px;"
-  src=""
+  src="https://github.com/youngluo/mp-weui/blob/master/docs/.vuepress/public/code.jpg"
   alt="小程序码"
 />
 

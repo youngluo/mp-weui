@@ -9,8 +9,8 @@
   ],
   "main": "packages/index.js",
   "scripts": {
-    "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
+    "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "copy": "npx rimraf lib && npx cpy node_modules/weui-wxss/dist/style/weui.wxss lib --rename=style.css",
     "postcopy": "npx cleancss -o lib/style.min.css lib/style.css",
@@ -20,6 +20,7 @@
     "major": "npm version major -m v%s && npm run publish",
     "docs": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh",
     "lint": "eslint --ext .js,.vue src"
   },
   "repository": {
