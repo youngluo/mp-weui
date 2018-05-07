@@ -2,7 +2,7 @@
   <div class="page">
       <div class="page__hd">
           <div class="page__title">MP-WeUI</div>
-          <div class="page__desc">MP-WeUI 是基于mpvue和weui-wxss封装的小程序UI库。</div>
+          <div class="page__desc">MP-WeUI 是基于 mpvue 和 weui-wxss 的小程序UI库。</div>
       </div>
       <div class="page__bd page__bd_spacing">
           <div class="kind-list">
