@@ -2,7 +2,7 @@
 home: true
 # heroImage: /code.jpg
 actionText: 开始 →
-actionLink: /components/checklist
+actionLink: /components/agree
 footer: MIT Licensed | Copyright © 2018 独孤求败
 ---
 

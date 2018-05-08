@@ -18,13 +18,14 @@
             size="9"
           />
         </div>
-        {{text}}
+        {{label}}
       </div>
     </label>
     <a
       class="weui-agree__link"
       v-text="urlText"
       :href="url"
+      v-if="url"
     />
   </checkbox-group>
 </template>
@@ -33,14 +34,11 @@
 export default {
   name: 'MpAgree',
   props: {
-    text: {
+    label: {
       type: String,
       default: '阅读并同意',
     },
-    urlText: {
-      type: String,
-      default: '《相关条款》',
-    },
+    urlText: String,
     value: Boolean,
     url: String,
   },

@@ -108,8 +108,11 @@
         </div>
       </div>
 
-      <mp-agree v-model="isAgree" />
-
+      <mp-agree
+        url-text="《相关条款》"
+        v-model="isAgree"
+        url="/abc"
+      />
     </div>
   </div>
 </template>

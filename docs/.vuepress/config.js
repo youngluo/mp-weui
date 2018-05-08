@@ -4,7 +4,7 @@ module.exports = {
   description: '基于 mpvue 和 weui-wxss 的微信小程序 UI 库',
   head: [
     ['meta', { name: 'keywords', content: 'mpvue,weui,mp-weui' }],
-    ['link', { rel: 'icon', href: `/logo.png` }],
+    ['link', { rel: 'icon', href: `/favicon.png` }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
@@ -20,7 +20,7 @@ module.exports = {
     docsDir: 'docs',
     sidebarDepth: 0,
     nav: [
-      { text: '组件', link: '/components/checklist' },
+      { text: '组件', link: '/components/agree' },
     ],
     sidebar: {
       '/components/': genSidebarConfig()
@@ -34,6 +34,7 @@ function genSidebarConfig() {
       title: '表单组件',
       collapsable: false,
       children: [
+        'agree',
         'checklist',
         'field',
         'radio',
