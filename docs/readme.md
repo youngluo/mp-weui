@@ -24,10 +24,10 @@ export default {
   }
 }
 ```
-### 示例
+<!-- ### 示例
 
 <img
   style="display:block;width:100%;max-width:430px;margin:0 auto 60px;"
   src="/mp-weui/code.jpg"
   alt="小程序码"
-/>
+/> -->
