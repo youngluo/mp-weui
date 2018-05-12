@@ -72,7 +72,7 @@ export default {
 
 ### 导航相关
 - [x] Navbar
-- [x] Tabbar
+- [x] Tabbar（建议采用小程序原生的tabbar，通过设置app.json来实现）
 
 ### 搜索相关
 - [x] Searchbar（待优化）
