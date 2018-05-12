@@ -15,6 +15,7 @@ module.exports = {
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
   serviceWorker: true,
+  ga: 'UA-117496504-1',
   themeConfig: {
     repo: 'youngluo/mp-weui',
     docsDir: 'docs',
