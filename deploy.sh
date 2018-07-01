@@ -4,22 +4,10 @@
 set -e
 
 # build
-npm run docs:build
+npm version patch -m v%s
 
-# navigate into the build output directory
-cd docs/.vuepress/dist
+npm publish
 
-# if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
+git push
 
-git init
-git add -A
-git commit -m 'update docs'
-
-# if you are deploying to https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
-
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:youngluo/mp-weui.git master:gh-pages
-
-cd -
+git push --tags
