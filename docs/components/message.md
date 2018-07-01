@@ -38,7 +38,6 @@ export default {
 ### confirmText *(v1.0.3 后废弃，改为 okText)*
 
 * Type: `string`
-* Default: `确定`
 
 ### okText
 
