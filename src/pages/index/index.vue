@@ -66,7 +66,7 @@ export default {
           id: 'feedback',
           name: '操作反馈',
           open: false,
-          pages: ['actionsheet', 'dialog', 'msg', 'picker', 'toast'],
+          pages: ['actionsheet', 'dialog', 'message', 'picker', 'toast'],
         },
         {
           id: 'nav',
