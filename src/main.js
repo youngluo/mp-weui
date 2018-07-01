@@ -35,7 +35,7 @@ export default {
       'pages/progress/main',
       'pages/actionsheet/main',
       'pages/dialog/main',
-      'pages/msg/main',
+      'pages/message/main',
       'pages/msg_success/main',
       'pages/msg_fail/main',
       'pages/picker/main',

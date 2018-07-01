@@ -30,8 +30,8 @@
         <div
           class="weui-form-preview__btn weui-form-preview__btn_primary"
           hover-class="weui-form-preview__btn_active"
-          @click="$emit('onConfirm', $event)"
-          v-text="confirmText"
+          v-text="confirmText || okText"
+          @click="onClick"
         />
       <!-- </slot> -->
     </div>
@@ -46,7 +46,7 @@ export default {
       type: Array,
       default: () => [],
     },
-    confirmText: {
+    okText: {
       type: String,
       default: '确定',
     },
@@ -54,9 +54,16 @@ export default {
       type: String,
       default: '取消',
     },
+    confirmText: String,
     showCancel: Boolean,
     title: String,
     value: String,
+  },
+  methods: {
+    onClick(e) {
+      this.$emit('onOk', e);
+      this.$emit('onConfirm', e);
+    },
   },
 };
 </script>

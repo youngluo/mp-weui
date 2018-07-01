@@ -2,9 +2,11 @@
   <div class="page">
     <mp-message
       content="内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现"
-      confirm-text="推荐操作"
       cancel-text="辅助操作"
+      ok-text="推荐操作"
       title="操作成功"
+      @onCancel="onCancel"
+      @onOk="onOK"
       show-cancel
     />
 
@@ -30,6 +32,14 @@ export default {
   components: {
     mpMessage,
     mpFooter,
+  },
+  methods: {
+    onOK() {
+      this.$toast('推荐操作');
+    },
+    onCancel() {
+      this.$toast('辅助操作');
+    },
   },
 };
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div class="page__hd">
-      <div class="page__title">Msg</div>
+      <div class="page__title">Message</div>
       <div class="page__desc">提示页</div>
     </div>
     <div class="page__bd">

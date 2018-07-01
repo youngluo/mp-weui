@@ -18,8 +18,8 @@ export default {
 
 ``` html
 <mp-message
-  confirm-text="推荐操作"
   cancel-text="辅助操作"
+  ok-text="推荐操作"
   content="内容详情"
   title="操作成功"
   show-cancel
@@ -35,7 +35,11 @@ export default {
 
 取消按钮文字。
 
-### confirmText
+### confirmText *(v1.0.3 后废弃，改为 okText)*
+
+* Type: `string`
+
+### okText
 
 * Type: `string`
 * Default: `确定`
@@ -68,3 +72,17 @@ export default {
 * Option: `success`、`error`
 
 类型。
+
+## Events
+
+### onCancel
+
+* Parameter: `$event`
+
+点击取消按钮事件
+
+### onOK
+
+* Parameter: `$event`
+
+点击确定按钮事件

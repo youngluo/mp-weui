@@ -22,11 +22,13 @@
     <div class="weui-msg__opr-area">
       <div class="weui-btn-area">
         <button
-          v-text="confirmText"
+          @click="$emit('onOk', $event)"
+          v-text="confirmText || okText"
           class="weui-btn"
           type="primary"
         />
         <button
+          @click="$emit('onCancel', $event)"
           v-text="cancelText"
           v-if="showCancel"
           class="weui-btn"
@@ -45,7 +47,7 @@ export default {
       type: String,
       default: 'success', // 'success', 'error'
     },
-    confirmText: {
+    okText: {
       type: String,
       default: '确定',
     },
@@ -53,6 +55,7 @@ export default {
       type: String,
       default: '取消',
     },
+    confirmText: String,
     showCancel: Boolean,
     content: String,
     title: String,

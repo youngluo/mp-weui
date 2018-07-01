@@ -35,9 +35,9 @@ this.rows = [
 
 ``` html
 <mp-preview
-  confirm-text="操作"
   value="￥2400.00"
   title="付款金额"
+  ok-text="操作"
   :rows="rows"
 />
 ```
@@ -51,7 +51,11 @@ this.rows = [
 
 取消按钮文字。
 
-### confirmText
+### confirmText *(v1.0.3 后废弃，改为 okText)*
+
+* Type: `string`
+
+### okText
 
 * Type: `string`
 * Default: `确定`
@@ -91,7 +95,11 @@ this.rows = [
 
 点击取消按钮事件
 
-### onConfirm
+### onConfirm *(v1.0.3 后废弃，改为 onOk)*
+
+* Parameter: `$event`
+
+### onOk
 
 * Parameter: `$event`
 

@@ -6,16 +6,16 @@
     </div>
     <div class="page__bd">
       <mp-preview
-        confirm-text="操作"
+        ok-text="操作"
         value="￥2400.00"
         title="付款金额"
         :rows="rows"
       />
       <mp-preview
         cancel-text="辅助操作"
-        @onConfirm="onConfirm"
         @onCancel="onCancel"
-        confirm-text="操作"
+        @onOk="onOK"
+        ok-text="操作"
         value="￥2400.00"
         title="付款金额"
         :rows="rows"
@@ -51,7 +51,7 @@ export default {
     };
   },
   methods: {
-    onConfirm() {
+    onOK() {
       this.$toast('操作');
     },
     onCancel() {
